@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="created starter spring boot project that will look at films from a sample database from oracle">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="added basic sql queried previously tested on workbench">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CountryLanguageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CountryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/repositories/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/repositories/CityRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,7 +97,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733686556820</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="created entity classes to model objects from the database and the empty repository classes to set some sql queries to retrieve data">
+      <created>1733759979366</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733759979366</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added basic sql queried previously tested on workbench">
+      <created>1733760193121</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733760193121</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +127,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created starter spring boot project that will look at films from a sample database from oracle" />
-    <option name="LAST_COMMIT_MESSAGE" value="created starter spring boot project that will look at films from a sample database from oracle" />
+    <MESSAGE value="created entity classes to model objects from the database and the empty repository classes to set some sql queries to retrieve data" />
+    <MESSAGE value="added basic sql queried previously tested on workbench" />
+    <option name="LAST_COMMIT_MESSAGE" value="added basic sql queried previously tested on workbench" />
   </component>
 </project>
