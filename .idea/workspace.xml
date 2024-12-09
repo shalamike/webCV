@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="added basic web page using angular components to build web cv and pull data from api" />
+    <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="added component for world countries to pull data from an API that will be created. Modified Profile Component to incorporate a table that will serve as the foundation for building a table in world countries">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/repositories/CountryLanguageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/repositories/CountryLanguageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/CountryLanguageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CountryLanguageService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733769355101</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added component for world countries to pull data from an API that will be created. Modified Profile Component to incorporate a table that will serve as the foundation for building a table in world countries">
+      <created>1733770088046</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733770088046</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +144,7 @@
     <MESSAGE value="created entity classes to model objects from the database and the empty repository classes to set some sql queries to retrieve data" />
     <MESSAGE value="added basic sql queried previously tested on workbench" />
     <MESSAGE value="added basic web page using angular components to build web cv and pull data from api" />
-    <option name="LAST_COMMIT_MESSAGE" value="added basic web page using angular components to build web cv and pull data from api" />
+    <MESSAGE value="added component for world countries to pull data from an API that will be created. Modified Profile Component to incorporate a table that will serve as the foundation for building a table in world countries" />
+    <option name="LAST_COMMIT_MESSAGE" value="added component for world countries to pull data from an API that will be created. Modified Profile Component to incorporate a table that will serve as the foundation for building a table in world countries" />
   </component>
 </project>

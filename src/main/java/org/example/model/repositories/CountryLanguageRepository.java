@@ -12,7 +12,7 @@ import java.util.List;
 public interface CountryLanguageRepository extends JpaRepository<CountryLanguage, CountryLanguageId> {
 
     // Find all languages spoken in a specific country
-    List<CountryLanguage> findByCountry_Code(String countryCode);
+    List<CountryLanguage> findByCountryCode(String countryCode);
 
     // Find all official languages
     List<CountryLanguage> findByIsOfficialTrue();
