@@ -11,4 +11,13 @@ import java.util.List;
 @Repository
 public interface CountryLanguageRepository extends JpaRepository<CountryLanguage, CountryLanguageId> {
 
+    // Find all languages spoken in a specific country
+    List<CountryLanguage> findByCountry_Code(String countryCode);
+
+    // Find all official languages
+    List<CountryLanguage> findByIsOfficialTrue();
+
+    // Find languages spoken by a specific percentage or higher
+    List<CountryLanguage> findByPercentageGreaterThan(Float percentage);
+
 }
