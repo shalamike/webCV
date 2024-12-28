@@ -1,5 +1,5 @@
 <div class="pokemon-container">
-    <h2>Pokémon Search</h2>
+    <h1>Pokémon Search</h1>
     
     <input
       type="text"
@@ -13,12 +13,12 @@
     </div>
   
     <div *ngIf="pokemonData" class="pokemon-info">
-      <h3>{{ pokemonData.name | titlecase }}</h3>
+      <h2>{{ pokemonData.name | titlecase }}</h2>
       <p><strong>ID:</strong> {{ pokemonData.id }}</p>
       <p><strong>Base Experience:</strong> {{ pokemonData.base_experience }}</p>
       <p><strong>Weight:</strong> {{ pokemonData.weight }}</p>
 
-      <h3>Sprites</h3>
+      <h2>Sprites</h2>
       <table class = "sprites-table">
         <thead>
           <tr>
@@ -39,7 +39,7 @@
       </table>
 
 
-      <h3>Abilities</h3>
+      <h2>Abilities</h2>
       <table class = "abilities-table">
         <thead>
           <tr>
