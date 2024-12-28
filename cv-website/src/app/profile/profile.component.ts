@@ -18,6 +18,13 @@ export class ProfileComponent {
   hoveredRow: number | null = null; // Tracks the currently hovered row index
   hoveredColumn: number | null = null; // Tracks the currently hovered column index
 
+  isCollapsed = true; // Tracks whether the table is collapsed, setting the inital state to collapsed
+
+   // Toggles the collapsed state
+   toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
   // Update hoveredRow and hoveredColumn on mouse events
   onMouseEnterCell(rowIndex: number, columnIndex: number) {
     this.hoveredRow = rowIndex;

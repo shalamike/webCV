@@ -12,11 +12,15 @@ public class CityService {
     @Autowired
     private CityRepository cityRepository;
 
-    public List<City> getCitiesByCountry(String countryCode) {
+    public List<City> getCitiesByCountryCode(String countryCode) {
         return cityRepository.findByCountry_Code(countryCode);
     }
 
-    public List<City> getCitiesWithLargePopulation(Integer minPopulation) {
+    public List<City> getCitiesWithPopulationGreaterThan(Integer minPopulation) {
         return cityRepository.findByPopulationGreaterThan(minPopulation);
+    }
+
+    public List<City> getCitiesByCountryName(String name){
+        return cityRepository.findByCountryName(name);
     }
 }

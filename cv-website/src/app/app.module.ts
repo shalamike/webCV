@@ -8,13 +8,15 @@ import { WorldPopulationsComponent } from './world-populations/world-populations
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TechStackComponent } from './tech-stack/tech-stack.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     WorldPopulationsComponent,
-    PokemonComponent
+    PokemonComponent,
+    TechStackComponent
   ],
   imports: [
     BrowserModule,

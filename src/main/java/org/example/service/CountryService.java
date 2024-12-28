@@ -25,6 +25,10 @@ public class CountryService {
         return findByPopulationGreaterThan(population);
     }
 
+    public List<Country>findAll(){
+        return countryRepository.findAll();
+    }
+
     public Country findCountryByName(String name){
         return countryRepository.findByName(name);
     }

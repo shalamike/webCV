@@ -21,19 +21,26 @@ public class CountryLanguageId implements Serializable {
         this.language = language;
     }
 
-    // Getters, Setters, equals(), and hashCode()
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CountryLanguageId that = (CountryLanguageId) o;
-        return Objects.equals(countryCode, that.countryCode) && Objects.equals(language, that.language);
+        if (!(o instanceof CountryLanguageId that)) return false;
+        return Objects.equals(getCountryCode(), that.getCountryCode()) && Objects.equals(getLanguage(), that.getLanguage());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(countryCode, language);
+        return Objects.hash(getCountryCode(), getLanguage());
     }
+
+    public String getCountryCode() {
+        return countryCode;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+// Getters, Setters, equals(), and hashCode()
+
 }
 

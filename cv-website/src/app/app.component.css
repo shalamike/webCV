@@ -1,0 +1,107 @@
+/* General reset to apply border-box for better box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Default styling for the body */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #ffffff); /* Light blue/teal gradient */
+    color: #333; /* Dark text color for contrast */
+    font-size: 16px; /* Base font size */
+    line-height: 1.6; /* Better readability */
+  }
+  
+  /* Dynamic font size (use root variables for scaling if needed) */
+  html {
+    font-size: 100%; /* Default base size */
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 90%; /* Slightly smaller on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    html {
+      font-size: 80%; /* Further adjust for very small screens */
+    }
+  }
+  
+  /* Style for containers to avoid sharp corners */
+  .container {
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #f1f8e9); /* Gradient for subtle depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
+    margin: 10px;
+  }
+  
+  /* Banner styling */
+  .banner {
+    background: linear-gradient(to right, #00796b, #004d40); /* Teal gradient */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeOut 5s ease-in-out 1; /* Fades out after 5 seconds */
+  }
+  
+  /* H1 styling inside the banner */
+  .banner h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  /* Fade-out animation */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Button styling for consistent aesthetics */
+  button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: linear-gradient(to right, #00897b, #004d40);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #004d40, #00897b); /* Reverse gradient on hover */
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  table th {
+    background: linear-gradient(to right, #e0f7fa, #b2dfdb); /* Subtle gradient for headers */
+  }
+  
+  table tr:hover {
+    background-color: #f1f8e9; /* Light highlight on row hover */
+  }

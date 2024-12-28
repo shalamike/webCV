@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="added component for world countries to pull data from an API that will be created. Modified Profile Component to incorporate a table that will serve as the foundation for building a table in world countries">
+    <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="created a new component for tech stack to move my profile component into and change profile component into my summary.&#10;&#10;made profile collapsible">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CountryApiExample.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CountryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/repositories/CountryLanguageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/repositories/CountryLanguageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/CountryLanguageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CountryLanguageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv-website/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv-website/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv-website/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv-website/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/profile/profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/entities/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/entities/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/entities/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/entities/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/entities/CountryLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/entities/CountryLanguage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/entities/CountryLanguageId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/entities/CountryLanguageId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/repositories/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/repositories/CityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/CountryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CountryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CountryApiExampleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +62,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;S:/programming stuff/programming/spartalessons/SakilaJPADemo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;S:/programming stuff/programming/spartalessons/BurgerSpring&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.codegpt.services.codegpt&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -60,10 +75,10 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="CountryApiExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CountryApiExample" />
       <module name="WebTemplate3" />
       <extension name="coverage">
         <pattern>
@@ -77,7 +92,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.CountryApiExample" />
       </list>
     </recent_temporary>
   </component>
@@ -125,7 +140,35 @@
       <option name="project" value="LOCAL" />
       <updated>1733770088046</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="created a component to pull pokemon data from the pokemonAPI to practice for my own api">
+      <created>1733787369441</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733787369441</updated>
+    </task>
+    <task id="LOCAL-00007" summary="seperated methods for fetching from api, added a table for different sprites">
+      <created>1733789451438</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733789451438</updated>
+    </task>
+    <task id="LOCAL-00008" summary="created a new component for tech stack to move my profile component into and change profile component into my summary">
+      <created>1735362082244</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735362082244</updated>
+    </task>
+    <task id="LOCAL-00009" summary="created a new component for tech stack to move my profile component into and change profile component into my summary.&#10;&#10;made profile collapsible">
+      <created>1735362117961</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735362117961</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +188,14 @@
     <MESSAGE value="added basic sql queried previously tested on workbench" />
     <MESSAGE value="added basic web page using angular components to build web cv and pull data from api" />
     <MESSAGE value="added component for world countries to pull data from an API that will be created. Modified Profile Component to incorporate a table that will serve as the foundation for building a table in world countries" />
-    <option name="LAST_COMMIT_MESSAGE" value="added component for world countries to pull data from an API that will be created. Modified Profile Component to incorporate a table that will serve as the foundation for building a table in world countries" />
+    <MESSAGE value="created a component to pull pokemon data from the pokemonAPI to practice for my own api" />
+    <MESSAGE value="seperated methods for fetching from api, added a table for different sprites" />
+    <MESSAGE value="created a new component for tech stack to move my profile component into and change profile component into my summary" />
+    <MESSAGE value="created a new component for tech stack to move my profile component into and change profile component into my summary.&#10;&#10;made profile collapsible" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a new component for tech stack to move my profile component into and change profile component into my summary.&#10;&#10;made profile collapsible" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
