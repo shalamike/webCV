@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="created a new component for tech stack to move my profile component into and change profile component into my summary.&#10;&#10;made profile collapsible">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CountryApiExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CountryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/src/app/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/entities/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/entities/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/entities/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/entities/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/entities/CountryLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/entities/CountryLanguage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/entities/CountryLanguageId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/entities/CountryLanguageId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/repositories/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/repositories/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/CountryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CountryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CountryApiExampleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1735362117961</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="created a new component for tech stack to move my profile component into and change profile component into my summary.&#10;&#10;made profile collapsible">
+      <created>1735362609561</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1735362609561</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
