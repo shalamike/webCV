@@ -3,6 +3,7 @@
       class="collapsible-header" 
       [class.collapsed-header]="isCollapsed" 
       (click)="toggleCollapse()"
+      (keypress)="toggleCollapse()"
     >
       <h2>techstack</h2>
       <span *ngIf="isCollapsed">▼</span>

@@ -72,7 +72,7 @@
 
   /* Collapsed container */
   .collapsible-container.collapsed-container {
-    width: 25%; /* Reduce width when collapsed */
+    width: 33%; /* Reduce width when collapsed */
     margin: 0;
   }
 
@@ -118,14 +118,14 @@
       border: 1px solid #ddd;
     }
   
-    .tech-stack-table td {
+    .profile-table td {
       display: block;
       text-align: center;
       padding: 5px;
       position: relative;
     }
   
-    .tech-stack-table td::before {
+    .profile-table td::before {
       content: attr(data-label); /* Use data-label attribute for column names */
       position: absolute;
       left: 0;

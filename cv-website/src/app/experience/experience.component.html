@@ -1,0 +1,19 @@
+
+<div class="collapsible-container" [class.collapsed-container]="isCollapsed">
+    <div class="collapsible-header" 
+    [class.collapsed-header]="isCollapsed" 
+        (click)="toggleCollapse()"
+        (keydown)="toggleCollapse()"
+        >
+      <h2 class = "experience-header">
+        Profile
+      </h2>
+      <span *ngIf="isCollapsed">▼</span>
+        <span *ngIf="!isCollapsed">▲</span>
+  
+      <div class="collapsible-content" [class.collapsed]="isCollapsed">
+>
+      </div>
+      
+      </div>
+  </div>

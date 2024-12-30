@@ -1,0 +1,51 @@
+.collapsible {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+  }
+  
+  .collapsible-header {
+    padding: 0.5em;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .collapsible-container {
+    width: 100%;
+    border: 2px solid #ddd; /* Adds a border */
+    border-radius: 8px; /* Optional rounded corners */
+    transition: width 0.3s ease, border-color 0.3s ease; /* Smooth transition for width and border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+  }
+  
+  /* Collapsed container */
+  .collapsible-container.collapsed-container {
+    width: 200%; /* Reduce width when collapsed */
+    margin: 0;
+  }
+  
+  
+  /* Collapsed header */
+  .collapsible-header.collapsed-header {
+    width: 95%; /* Match container width when collapsed */
+  }
+  
+  
+  .collapsible-header:hover {
+    background-color: #e0f0ff;
+  }
+  
+  /* Collapsible content */
+  .collapsible-content {
+  max-height: 500px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  }
+  
+  .collapsible-content.collapsed {
+  max-height: 0;
+  padding: 0;
+  transition: max-height 0.3s ease;
+  }

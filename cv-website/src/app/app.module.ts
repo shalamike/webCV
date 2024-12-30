@@ -9,6 +9,7 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TechStackComponent } from './tech-stack/tech-stack.component';
     ProfileComponent,
     WorldPopulationsComponent,
     PokemonComponent,
-    TechStackComponent
+    TechStackComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
