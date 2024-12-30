@@ -1,1 +1,50 @@
-<p>tech-stack works!</p>
+<div class="collapsible-container" [class.collapsed-container]="isCollapsed">
+    <div 
+      class="collapsible-header" 
+      [class.collapsed-header]="isCollapsed" 
+      (click)="toggleCollapse()"
+    >
+      <h2>techstack</h2>
+      <span *ngIf="isCollapsed">▼</span>
+      <span *ngIf="!isCollapsed">▲</span>
+    </div>
+  
+    <div class="collapsible-content" [class.collapsed]="isCollapsed">
+      <table class="tech-stack-table">
+        <thead>
+          <th>Technology</th>
+          <th>Component With</th>
+          <th>Experienced With</th>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let skill of skills; let rowIndex = index"
+            [class.highlight-row]="hoveredRow === rowIndex"
+          >
+            <td
+              (mouseenter)="onMouseEnterCell(rowIndex, 0)"
+              (mouseleave)="onMouseLeaveCell()"
+              [class.highlight-cell]="hoveredColumn === 0"
+            >
+              {{ skill.technology }}
+            </td>
+            <td
+              (mouseenter)="onMouseEnterCell(rowIndex, 1)"
+              (mouseleave)="onMouseLeaveCell()"
+              [class.highlight-cell]="hoveredColumn === 1"
+            >
+              {{ skill.componentWith }}
+            </td>
+            <td
+              (mouseenter)="onMouseEnterCell(rowIndex, 2)"
+              (mouseleave)="onMouseLeaveCell()"
+              [class.highlight-cell]="hoveredColumn === 2"
+            >
+              {{ skill.experiencedWith }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
