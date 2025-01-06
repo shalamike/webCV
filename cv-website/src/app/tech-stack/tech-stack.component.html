@@ -10,7 +10,11 @@
       <span *ngIf="!isCollapsed">▲</span>
     </div>
   
-    <div class="collapsible-content" [class.collapsed]="isCollapsed">
+    <div class="collapsible-content" [class.collapsed]="isCollapsed"
+    (click)="toggleCollapse()"
+    (keypress)="toggleCollapse()"
+  >
+      
       <table class="tech-stack-table">
         <thead>
           <th>Technology</th>

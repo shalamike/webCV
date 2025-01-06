@@ -30,6 +30,8 @@ export class TechStackComponent {
   onMouseEnterCell(rowIndex: number, columnIndex: number) {
     this.hoveredRow = rowIndex;
     this.hoveredColumn = columnIndex;
+    console.log('hoveredRow: ', this.hoveredRow);
+    console.log('hoveredColumn: ', this.hoveredColumn);
   }
   
   //ensures that when the mouse is no longer hovering over a cell, it resets to null to make sure nothing is highlighted
