@@ -21,7 +21,6 @@
     <app-tech-stack></app-tech-stack>
     <span class="label" *ngIf="!isExpanded || isExpanded !== 'techStack'"></span>
   </div>
-
   <!-- Profile -->
   <div
     class="collapsible-item"
@@ -31,7 +30,15 @@
     <app-profile></app-profile>
     <span class="label" *ngIf="!isExpanded || isExpanded !== 'profile'"></span>
   </div>
-
+  <!-- Experience -->
+ <div
+ class="collapsible-item"
+ [ngClass]="{ 'expanded': isExpanded === 'experience', 'hidden': isExpanded && isExpanded !== 'experience' }"
+ (click)="toggleExpand('experience')"
+>   
+ <app-experience></app-experience>
+ <span class="label" *ngIf="!isExpanded || isExpanded !== 'experience'"></span>
+</div>
   <!-- Hobbies, Interests, and Projects -->
   <div
     class="collapsible-item"

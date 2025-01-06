@@ -4,12 +4,14 @@
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 1em;
+  font-family: 'Funnel', Monospace;
 }
 
 .collapsible-header {
   padding: 0.5em;
   cursor: pointer;
   user-select: none;
+  font-family: 'Funnel', Monospace;
 }
 
 .collapsible-container {
@@ -48,4 +50,17 @@ transition: max-height 0.3s ease;
 max-height: 0;
 padding: 0;
 transition: max-height 0.3s ease;
+}
+
+.profile-list ul{
+  list-style-type: disc;
+  margin: auto;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.profile-list li{
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Funnel', Monospace;;
 }
