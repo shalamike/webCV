@@ -3,9 +3,9 @@
 /* using css to style the table */
 
 .tech-stack-table {
-    width: 100%;
+    width: 97.5%;
     border-collapse: collapse;  /* removes cell spacing */
-    margin: 20px;
+    margin: auto;
     font-size: 16px;
     border: 1px solid #ddd;
   }
@@ -86,9 +86,6 @@
   }
 
   
-  .collapsible-header:hover {
-    background-color: #e0f0ff;
-  }
   
 /* Collapsible content */
 .collapsible-content {

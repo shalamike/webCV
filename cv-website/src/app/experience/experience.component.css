@@ -34,14 +34,12 @@
   }
   
   
-  .collapsible-header:hover {
-    background-color: #e0f0ff;
-  }
+
   
   /* Collapsible content */
   .collapsible-content {
-  max-height: 500px;
-  overflow: hidden;
+  max-height: 100%;
+  overflow: auto;
   transition: max-height 0.3s ease;
   }
   
@@ -49,4 +47,17 @@
   max-height: 0;
   padding: 0;
   transition: max-height 0.3s ease;
+  }
+
+  .experience-list ul{
+    list-style-type: disc;
+    margin: auto;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .experience-list li{
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Funnel', Monospace;;
   }

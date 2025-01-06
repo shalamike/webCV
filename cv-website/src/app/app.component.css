@@ -16,8 +16,6 @@
 
 
   .website-header{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px;
   }
@@ -35,6 +33,20 @@
     padding: auto;
     font-family: 'Funnel', Monospace;
   }
+
+  .website-clickable-links{
+    margin-left: 37.5%; ;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    font-family: 'Funnel', Monospace;
+  }
+
+  .website-clickable-links h2{
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
 
 /* Flexbox container */
 .collapsible-container {
