@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { HobbiesInterestsProjectsComponent } from './hobbies-interests-projects/hobbies-interests-projects.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ExperienceComponent } from './experience/experience.component';
     WorldPopulationsComponent,
     PokemonComponent,
     TechStackComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    HobbiesInterestsProjectsComponent
   ],
   imports: [
     BrowserModule,

@@ -22,7 +22,7 @@
 
 /* Collapsed container */
 .collapsible-container.collapsed-container {
-  width: 33%; /* Reduce width when collapsed */
+  width: 100%; /* Reduce width when collapsed */
   margin: 0;
 }
 

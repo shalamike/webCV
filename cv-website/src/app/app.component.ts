@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cv-website';
+  isExpanded: string | null = null;
+
+  toggleExpand(component: string) {
+    // Toggle between expanded and collapsed state
+    this.isExpanded = this.isExpanded === component ? null : component;
+
+  }
 }
+
+
