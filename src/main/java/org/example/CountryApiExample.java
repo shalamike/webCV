@@ -25,11 +25,11 @@ public class CountryApiExample
         this.countryRepository = countryRepository;
     }
 
-    @Bean
-    public CommandLineRunner runner(CountryRepository countryRepository){
-//        return args -> logger.info(countryRepository.findByContinent("Africa").toString());
-        return args -> logger.info(countryRepository.findByPopulationGreaterThan(90000).toString());
-    }
+//    @Bean
+//    public CommandLineRunner runner(CountryRepository countryRepository){
+////        return args -> logger.info(countryRepository.findByContinent("Africa").toString());
+//        return args -> logger.info(countryRepository.findByPopulationGreaterThan(90000).toString());
+//    }
     public static void main( String[] args )
     {
         SpringApplication.run(CountryApiExample.class, args);
