@@ -14,15 +14,4 @@ public class CountryLanguageService {
     @Autowired
     private CountryLanguageRepository countryLanguageRepository;
 
-    public List<CountryLanguage> findLanguagesByCountryCode(String countryCode){
-        return countryLanguageRepository.findByCountryCode(countryCode);
-    }
-
-    List<CountryLanguage>findOfficialLanguagesOfCountry(){
-        return countryLanguageRepository.findByIsOfficialTrue();
-    }
-
-    List<CountryLanguage> findByPercentageGreaterThan(Float percent){
-        return findByPercentageGreaterThan(percent);
-    }
 }

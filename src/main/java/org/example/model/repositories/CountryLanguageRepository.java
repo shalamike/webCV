@@ -1,6 +1,7 @@
 package org.example.model.repositories;
 
 
+import org.example.model.entities.Country;
 import org.example.model.entities.CountryLanguage;
 import org.example.model.entities.CountryLanguageId;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,14 +11,13 @@ import java.util.List;
 
 @Repository
 public interface CountryLanguageRepository extends JpaRepository<CountryLanguage, CountryLanguageId> {
-
-    // Find all languages spoken in a specific country
     List<CountryLanguage> findByCountryCode(String countryCode);
 
-    // Find all official languages
-    List<CountryLanguage> findByIsOfficialTrue();
 
-    // Find languages spoken by a specific percentage or higher
-    List<CountryLanguage> findByPercentageGreaterThan(Float percentage);
+    //find all countries where a given language is spoken
+
+    //find all languages spoken in  a given country
+
+
 
 }

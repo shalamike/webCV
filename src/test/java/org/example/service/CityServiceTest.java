@@ -14,6 +14,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,17 +47,17 @@ public class CityServiceTest {
 
         List<City> mockCities = Arrays.asList(city1, city2);
 
-        when(cityRepository.findByCountryName("TestCountry")).thenReturn(mockCities);
+        when(cityRepository.findByCountryName("TestCountry")).thenReturn(Optional.of(mockCities));
     }
 
     @Test
     public void testGetCitiesByCountryName(){
 
-        List<City> results = cityService.getCitiesByCountryName("TestCountry");
+        Optional<List<City>> results = cityService.getCitiesByCountryName("TestCountry");
 
-        assertEquals(2, results.size());
-        assertEquals("CityOne", results.get(0).getName());
-        assertEquals("CityTwo", results.get(1).getName());
+        assertEquals(2, results.get().size());
+        assertEquals("CityOne", results.get().get(0).getName());
+        assertEquals("CityTwo", results.get().get(1).getName());
 
         verify(cityRepository, times(1)).findByCountryName("TestCountry");
 

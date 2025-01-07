@@ -2,14 +2,12 @@ package org.example.service;
 
 
 import org.example.model.entities.Country;
-import org.example.model.entities.CountryLanguage;
-import org.example.model.repositories.CityRepository;
-import org.example.model.repositories.CountryLanguageRepository;
 import org.example.model.repositories.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CountryService {
@@ -17,19 +15,23 @@ public class CountryService {
     @Autowired
     private CountryRepository countryRepository;
 
-    public List<Country> findCountriesByContinent(String continent){
+    public Optional<List<Country>> findCountriesByContinent(String continent){
         return countryRepository.findByContinent(continent);
     }
 
-    public List<Country> findByPopulationGreaterThan(Integer population){
+    public Optional<List<Country>> findByPopulationGreaterThan(Integer population){
         return findByPopulationGreaterThan(population);
     }
 
-    public List<Country>findAll(){
-        return countryRepository.findAll();
+    public Optional<List<Country>>findAll(){
+        return Optional.of(countryRepository.findAll());
     }
 
-    public Country findCountryByName(String name){
+    public Optional<Country> findCountryByName(String name){
         return countryRepository.findByName(name);
+    }
+
+    public Optional<List<Country>> findCountriesWhereLanguageIsOfficial(String language){
+        return countryRepository.findCountriesWhereLanguageIsOfficial(language);
     }
 }
