@@ -9,6 +9,9 @@ import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
+
+import static org.example.service.HandleErrors.handleErrorsOrReturn;
+
 @Service
 public class CityService {
     @Autowired
@@ -32,22 +35,13 @@ public class CityService {
         }
     }
 
-    public Optional<City> findCityByName(String city){
-        try{
-            return cityRepository.findByCityName(city);
-        }catch (Exception e){
-            System.err.println("Error fetching city " + e.getMessage());
-            return Optional.empty();
-        }
+    public Optional<?> findCityByName(String city){
+        return handleErrorsOrReturn(cityRepository.findByName(city));
     }
 
-    public Optional<List<City>> getCitiesByCountryNameAndPopulationGreaterThan(String countryName, int population){
-        try{
-            return  cityRepository.findCitiesByCountryNameAndPopulationGreaterThan(population,countryName);
-        } catch (Exception e){
-            System.err.println("Error fetching cities " + e.getMessage());
-            return Optional.empty();
-        }
+    public Optional<?> getCitiesByCountryNameAndPopulationGreaterThan(String countryName, int population){
+
+        return handleErrorsOrReturn(cityRepository.findCitiesByCountryNameAndPopulationGreaterThan(population,countryName));
     }
 
     public Optional<List<City>> getCitiesByCountryName(String name){

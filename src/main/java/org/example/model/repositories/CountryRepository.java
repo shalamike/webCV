@@ -22,7 +22,8 @@ public interface CountryRepository extends JpaRepository<Country, String> {
     Optional<List<Country>> findByPopulationGreaterThan(Integer population);
 
     // Find a country by name
-    Optional<Country> findByName(String name);
+    @Query(value = "select c from Country c where c.name = :name")
+    Optional<Country> findByName(@Param("name") String name);
 
     //find countries where a given language is the official language
 

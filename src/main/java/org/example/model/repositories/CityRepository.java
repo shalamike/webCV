@@ -17,7 +17,7 @@ public interface CityRepository extends JpaRepository<City, Long> {
     // Find all cities by country code
     Optional<List<City>> findByCountry_Code(String countryCode);
 
-    Optional<City>findByCityName(String city);
+    Optional<City>findByName(String city);
 
     @Query(value = "select ci from City ci join ci.country co " + "\n" +
             "where co.name = :country")

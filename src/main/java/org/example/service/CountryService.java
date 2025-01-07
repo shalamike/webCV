@@ -9,29 +9,32 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+import static org.example.service.HandleErrors.handleErrorsOrReturn;
+
 @Service
 public class CountryService {
 
     @Autowired
     private CountryRepository countryRepository;
 
-    public Optional<List<Country>> findCountriesByContinent(String continent){
-        return countryRepository.findByContinent(continent);
+    public Optional<?> findCountriesByContinent(String continent){
+        return handleErrorsOrReturn(countryRepository.findByContinent(continent));
     }
 
-    public Optional<List<Country>> findByPopulationGreaterThan(Integer population){
-        return findByPopulationGreaterThan(population);
+    public Optional<?> findByPopulationGreaterThan(Integer population){
+        return handleErrorsOrReturn(findByPopulationGreaterThan(population));
     }
 
-    public Optional<List<Country>>findAll(){
-        return Optional.of(countryRepository.findAll());
+    public Optional<?>findAll(){
+        return handleErrorsOrReturn(Optional.of(countryRepository.findAll()));
     }
 
-    public Optional<Country> findCountryByName(String name){
-        return countryRepository.findByName(name);
+    public Optional<?> findCountryByName(String name){
+
+        return handleErrorsOrReturn(countryRepository.findByName(name));
     }
 
-    public Optional<List<Country>> findCountriesWhereLanguageIsOfficial(String language){
-        return countryRepository.findCountriesWhereLanguageIsOfficial(language);
+    public Optional<?> findCountriesWhereLanguageIsOfficial(String language){
+        return handleErrorsOrReturn(countryRepository.findCountriesWhereLanguageIsOfficial(language));
     }
 }
