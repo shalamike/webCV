@@ -53,8 +53,9 @@ public class CityServiceTest {
     @Test
     public void testGetCitiesByCountryName(){
 
-        Optional<List<City>> results = cityService.getCitiesByCountryName("TestCountry");
+        Optional<List<City>> results = (Optional<List<City>>) cityService.getCitiesByCountryName("TestCountry");
 
+        assertTrue(results.isPresent());
         assertEquals(2, results.get().size());
         assertEquals("CityOne", results.get().get(0).getName());
         assertEquals("CityTwo", results.get().get(1).getName());

@@ -14,43 +14,29 @@ import static org.example.service.HandleErrors.handleErrorsOrReturn;
 
 @Service
 public class CityService {
+
+    String objectType = "city";
     @Autowired
     private CityRepository cityRepository;
 
-    public Optional<List<City>> getCitiesByCountryCode(String countryCode) {
-        try{
-            return cityRepository.findByCountry_Code(countryCode);
-        } catch (Exception e){
-            System.err.println("Error fetching cities " + e.getMessage());
-            return Optional.empty();
-        }
+    public Optional<?> getCitiesByCountryCode(String countryCode) {
+        return handleErrorsOrReturn(cityRepository.findByCountry_Code(countryCode), objectType);
+
     }
 
-    public Optional<List<City>> getCitiesWithPopulationGreaterThan(Integer minPopulation) {
-        try{
-            return cityRepository.findByPopulationGreaterThan(minPopulation);
-        } catch (Exception e){
-            System.err.println("Error fetching cities " + e.getMessage());
-            return Optional.empty();
-        }
+    public Optional<?> getCitiesWithPopulationGreaterThan(Integer minPopulation) {
+        return handleErrorsOrReturn(cityRepository.findByPopulationGreaterThan(minPopulation), objectType);
     }
 
     public Optional<?> findCityByName(String city){
-        return handleErrorsOrReturn(cityRepository.findByName(city));
+        return handleErrorsOrReturn(cityRepository.findByName(city), objectType);
     }
 
     public Optional<?> getCitiesByCountryNameAndPopulationGreaterThan(String countryName, int population){
-
-        return handleErrorsOrReturn(cityRepository.findCitiesByCountryNameAndPopulationGreaterThan(population,countryName));
+        return handleErrorsOrReturn(cityRepository.findCitiesByCountryNameAndPopulationGreaterThan(population,countryName), objectType);
     }
 
-    public Optional<List<City>> getCitiesByCountryName(String name){
-        try{
-            return cityRepository.findByCountryName(name);
-        } catch (Exception e){
-            System.err.println("Error fetching cities " + e.getMessage());
-            return Optional.empty();
-        }
-
+    public Optional<?> getCitiesByCountryName(String name){
+        return handleErrorsOrReturn(cityRepository.findByCountryName(name), objectType);
     }
 }

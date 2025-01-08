@@ -13,28 +13,28 @@ import static org.example.service.HandleErrors.handleErrorsOrReturn;
 
 @Service
 public class CountryService {
-
+    private String objectType = "country";
     @Autowired
     private CountryRepository countryRepository;
 
     public Optional<?> findCountriesByContinent(String continent){
-        return handleErrorsOrReturn(countryRepository.findByContinent(continent));
+        return handleErrorsOrReturn(countryRepository.findByContinent(continent), objectType);
     }
 
     public Optional<?> findByPopulationGreaterThan(Integer population){
-        return handleErrorsOrReturn(findByPopulationGreaterThan(population));
+        return handleErrorsOrReturn(findByPopulationGreaterThan(population), objectType);
     }
 
     public Optional<?>findAll(){
-        return handleErrorsOrReturn(Optional.of(countryRepository.findAll()));
+        return handleErrorsOrReturn(Optional.of(countryRepository.findAll()), objectType);
     }
 
     public Optional<?> findCountryByName(String name){
 
-        return handleErrorsOrReturn(countryRepository.findByName(name));
+        return handleErrorsOrReturn(countryRepository.findByName(name), objectType);
     }
 
     public Optional<?> findCountriesWhereLanguageIsOfficial(String language){
-        return handleErrorsOrReturn(countryRepository.findCountriesWhereLanguageIsOfficial(language));
+        return handleErrorsOrReturn(countryRepository.findCountriesWhereLanguageIsOfficial(language), objectType);
     }
 }

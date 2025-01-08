@@ -15,12 +15,13 @@ import static org.example.service.HandleErrors.handleErrorsOrReturn;
 @Service
 public class CountryLanguageService {
 
+    private String objectType = "languages";
     @Autowired
     private CountryLanguageRepository countryLanguageRepository;
 
 
     public Optional<?> findLanguagesByCountryName(String country){
-        return handleErrorsOrReturn(countryLanguageRepository.findLanguagesByCountryName(country));
+        return handleErrorsOrReturn(countryLanguageRepository.findLanguagesByCountryName(country), objectType);
     }
 
     public Optional<?> findOfficialLanguageAndSpokenInCountry(String country){

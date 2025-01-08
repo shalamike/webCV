@@ -22,12 +22,12 @@ public class CountryLanguageController {
 
     private String objectType = "language";
 
-    @GetMapping("/countrylanguage1")
+    @GetMapping("/countrylanguages")
     public ResponseEntity<?> findLanguagesByCountryName(@RequestParam String name){
         return handleResponse(countryLanguageService.findLanguagesByCountryName(name), objectType);
     }
 
-    @GetMapping("/countrylanguage2")
+    @GetMapping("/countrymainlanguages")
     public ResponseEntity<?> findOfficialAndSPokenLanguageByCountryName(@RequestParam String name){
         return handleResponse(countryLanguageService.findOfficialLanguageAndSpokenInCountry(name), objectType);
     }
