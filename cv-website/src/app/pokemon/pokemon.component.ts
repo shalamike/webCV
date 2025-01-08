@@ -11,6 +11,7 @@ export class PokemonComponent {
   pokemonData: any = null;
   errorMessage: string = '';
   abilityDescriptions: { [key: string]: string } = {}; // Store ability descriptions
+  isCollapsed: any;
 
   constructor(private pokemonService: PokemonService) {}
 
@@ -63,4 +64,9 @@ export class PokemonComponent {
     return effectEntry?.effect || null;
   }
   
+
+     // Toggles the collapsed state
+     toggleCollapse() {
+      this.isCollapsed = !this.isCollapsed;
+    }
 }
