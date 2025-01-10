@@ -1,56 +1,81 @@
 <div class="website-header">
   <h1>Michael Shalaby</h1>
-
 </div>
 
-<div class = "website-clickable-links">
+<div class="website-clickable-links">
   <h2>
-    <a href="https://www.linkedin.com/in/michael-shalaby-535977129/">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/michael-shalaby-535977129/"
+      >LinkedIn</a
+    >
   </h2>
   <h2>
     <a href="https://github.com/shalamike">GitHub</a>
   </h2>
   <h2>
-    <a href="https://drive.google.com/file/d/1zepFJigPrVntvxkc8_NFSQH_OMzbzAlo/view?usp=sharing">CV</a>
-  </h2>  
+    <a
+      href="https://drive.google.com/file/d/1zepFJigPrVntvxkc8_NFSQH_OMzbzAlo/view?usp=sharing"
+      >CV</a
+    >
+  </h2>
 </div>
-
 
 <div class="collapsible-container">
   <!-- Tech Stack -->
   <div
     class="collapsible-item"
-    [ngClass]="{ 'expanded': isExpanded === 'techStack', 'hidden': isExpanded && isExpanded !== 'techStack' }"
+    [ngClass]="{
+      expanded: isExpanded === 'techStack',
+      hidden: isExpanded && isExpanded !== 'techStack'
+    }"
     (click)="toggleExpand('techStack')"
   >
     <app-tech-stack></app-tech-stack>
-    <span class="label" *ngIf="!isExpanded || isExpanded !== 'techStack'"></span>
+    <span
+      class="label"
+      *ngIf="!isExpanded || isExpanded !== 'techStack'"
+    ></span>
   </div>
   <!-- Profile -->
   <div
     class="collapsible-item"
-    [ngClass]="{ 'expanded': isExpanded === 'profile', 'hidden': isExpanded && isExpanded !== 'profile' }"
+    [ngClass]="{
+      expanded: isExpanded === 'profile',
+      hidden: isExpanded && isExpanded !== 'profile'
+    }"
     (click)="toggleExpand('profile')"
   >
     <app-profile></app-profile>
     <span class="label" *ngIf="!isExpanded || isExpanded !== 'profile'"></span>
   </div>
   <!-- Experience -->
- <div
- class="collapsible-item"
- [ngClass]="{ 'expanded': isExpanded === 'experience', 'hidden': isExpanded && isExpanded !== 'experience' }"
- (click)="toggleExpand('experience')"
->   
- <app-experience></app-experience>
- <span class="label" *ngIf="!isExpanded || isExpanded !== 'experience'"></span>
-</div>
+  <div
+    class="collapsible-item"
+    [ngClass]="{
+      expanded: isExpanded === 'experience',
+      hidden: isExpanded && isExpanded !== 'experience'
+    }"
+    (click)="toggleExpand('experience')"
+  >
+    <app-experience></app-experience>
+    <span
+      class="label"
+      *ngIf="!isExpanded || isExpanded !== 'experience'"
+    ></span>
+  </div>
   <!-- Hobbies, Interests, and Projects -->
   <div
     class="collapsible-item"
-    [ngClass]="{ 'expanded': isExpanded === 'hobbies-interests-projects', 'hidden': isExpanded && isExpanded !== 'hobbies-interests-projects' }"
+    [ngClass]="{
+      expanded: isExpanded === 'hobbies-interests-projects',
+      hidden: isExpanded && isExpanded !== 'hobbies-interests-projects'
+    }"
     (click)="toggleExpand('hobbies-interests-projects')"
   >
     <app-hobbies-interests-projects></app-hobbies-interests-projects>
-    <span class="label" *ngIf="!isExpanded || isExpanded !== 'hobbies-interests-projects'"></span>
+    <span
+      class="label"
+      *ngIf="!isExpanded || isExpanded !== 'hobbies-interests-projects'"
+    ></span>
   </div>
 </div>
+

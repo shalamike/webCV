@@ -1,79 +1,92 @@
 <div class="collapsible-container" [class.collapsed-container]="isCollapsed">
-  <div class="collapsible-header" 
-  [class.collapsed-header]="isCollapsed" 
-      (click)="toggleCollapse()"
-      (keydown)="toggleCollapse()"
-      >
-    <h2 class = "PokemonHeader">
-      Pokemon Search (Api created by <a href="https://pokeapi.co/">PokeAPI</a>)
-    </h2>
-
+  <div
+    class="collapsible-header"
+    (click)="toggleCollapse()"
+    (keydown)="toggleCollapse()"
+    tabindex="0"
+    role="button"
+  >
+    <h2>Pokedex</h2>
+    <p>A tool to search through pokemon stored on the <a href = "https://pokeapi.co/">pokemon</a> api</p>
     <span *ngIf="isCollapsed">▼</span>
-      <span *ngIf="!isCollapsed">▲</span>
+    <span *ngIf="!isCollapsed">▲</span>
+  </div>
 
-    <div class="collapsible-content" [class.collapsed]="isCollapsed">
-      <div class="pokemon-container">
-        <h1>Pokémon Search</h1>
-        
-        <input
-          type="text"
-          placeholder="Enter Pokémon name"
-          [(ngModel)]="searchName"
-        />
-        <button (click)="fetchPokemon()">Search</button>
-      
-        <div *ngIf="errorMessage" class="error-message">
-          {{ errorMessage }}
-        </div>
-      
-        <div *ngIf="pokemonData" class="pokemon-info">
-          <h2>{{ pokemonData.name | titlecase }}</h2>
-          <p><strong>ID:</strong> {{ pokemonData.id }}</p>
-          <p><strong>Base Experience:</strong> {{ pokemonData.base_experience }}</p>
-          <p><strong>Weight:</strong> {{ pokemonData.weight }}</p>
-    
-          <h2>Sprites</h2>
-          <table class = "sprites-table">
-            <thead>
-              <tr>
-                <th>Front Default</th>
-                <th>Back Default</th>
-                <th>Front Shiny</th>
-                <th>Back Shiny</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><img [src]="pokemonData.sprites.front_default" alt="{{ pokemonData.name }}" /></td>
-                <td><img [src]="pokemonData.sprites.back_default" alt="{{ pokemonData.name }}" /></td>
-                <td><img [src]="pokemonData.sprites.front_shiny" alt="{{ pokemonData.name }}" /></td>
-                <td><img [src]="pokemonData.sprites.back_shiny" alt="{{ pokemonData.name }}" /></td>
-              </tr>
-            </tbody>
-          </table>
-    
-    
-          <h2>Abilities</h2>
-          <table class = "abilities-table">
-            <thead>
-              <tr>
-                <th>Ability</th>
-                <th>description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let ability of pokemonData.abilities">
-                <td>{{ ability.ability.name }}</td>
-                <td>{{ abilityDescriptions[ability.ability.name] || 'Loading...' }}</td>  
-              </tr>
-            </tbody>
-          </table>
-        </div>
-    
-    
-    
+  <div class="collapsible-content" [class.collapsed]="isCollapsed">
+    <div class="pokedex">
+      <input
+        type="text"
+        placeholder="Enter Pokémon name"
+        [(ngModel)]="searchName"
+        class="pokedex-input"
+      />
+      <button (click)="fetchPokemon()" class="pokedex-button">Search</button>
+
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+      <div *ngIf="pokemonData" class="pokemon-card">
+        <h2>{{ pokemonData.name | titlecase }}</h2>
+        <table class="pokemon_sprites">
+          <thead>
+            <tr>
+              <th>Front</th>
+              <th>Back</th>
+              <th>Front Shiny</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  [src]="pokemonData.sprites.front_default"
+                  alt="front sprite"
+                />
+              </td>
+              <td>
+                <img
+                  [src]="pokemonData.sprites.back_default"
+                  alt="back sprite"
+                />
+              </td>
+              <td>
+                <img
+                  [src]="pokemonData.sprites.front_shiny"
+                  alt="front shiny sprite"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>ID:</strong> {{ pokemonData.id }}</p>
+        <p><strong>Base Experience:</strong> {{ pokemonData.base_experience }}</p>
+        <p><strong>Weight:</strong> {{ pokemonData.weight }}</p>
+        <p>
+          <strong>Types:</strong>
+          <span
+            *ngFor="
+              let types of pokemonData.types;
+              let last = last
+            "
+            [ngClass]="{ 'mr-2': !last }"
+          >
+            {{ types.type.name }}<span *ngIf="!last">, </span>
+          </span>
+        </p>
+        <table class="abilities-table">
+          <thead>
+            <tr>
+              <th>Ability</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ability of pokemonData.abilities">
+              <td>{{ ability.ability.name }}</td>
+              <td>{{ abilityDescriptions[ability.ability.name] || 'Loading...' }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-    
-    </div>
+  </div>
 </div>

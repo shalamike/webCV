@@ -1,52 +1,88 @@
+.pokedex {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #f8f8f8, #e0e0e0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.pokedex-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
 
+.pokedex-button {
+  background-color: #ff5252;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-.collapsible {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1em;
-  }
-  
-  .collapsible-header {
-    padding: 0.5em;
-    cursor: pointer;
-    user-select: none;
-    font-family: 'Funnel', Monospace;
-  }
-  
-  .collapsible-container {
-    width: 100%;
-    border: 2px solid #ddd; /* Adds a border */
-    border-radius: 8px; /* Optional rounded corners */
-    transition: width 0.3s ease, border-color 0.3s ease; /* Smooth transition for width and border */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
-  }
-  
-  /* Collapsed container */
-  .collapsible-container.collapsed-container {
-    width: 100%; /* Reduce width when collapsed */
-    margin: 0;
-  }
-  
-  
-  /* Collapsed header */
-  .collapsible-header.collapsed-header {
-    width: 95%; /* Match container width when collapsed */
-  }
-  
+.pokedex-button:hover {
+  background-color: #ff1744;
+}
 
-  
-  /* Collapsible content */
-  .collapsible-content {
-    max-height: 100%;
-    overflow: auto;
+.pokemon-card {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #fff;
+}
+.abilities-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.abilities-table th, .abilities-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.collapsible-container {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  max-width: 420px;
   transition: max-height 0.3s ease;
-  }
-  
-  .collapsible-content.collapsed {
+}
+
+.collapsible-header {
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #ff5252;
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.collapsible-content {
+  overflow: hidden;
+  max-height: 100%;
+  transition: max-height 0.3s ease;
+}
+
+.collapsible-content.collapsed {
   max-height: 0;
   padding: 0;
-  transition: max-height 0.3s ease;
-  }
+}
