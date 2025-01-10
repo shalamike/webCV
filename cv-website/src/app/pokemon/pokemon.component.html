@@ -19,6 +19,7 @@
         placeholder="Enter Pokémon name"
         [(ngModel)]="searchName"
         class="pokedex-input"
+        (keydown.enter)="fetchPokemon()"
       />
       <button (click)="fetchPokemon()" class="pokedex-button">Search</button>
 
@@ -60,18 +61,6 @@
         <p><strong>ID:</strong> {{ pokemonData.id }}</p>
         <p><strong>Base Experience:</strong> {{ pokemonData.base_experience }}</p>
         <p><strong>Weight:</strong> {{ pokemonData.weight }}</p>
-        <p>
-          <strong>Types:</strong>
-          <span
-            *ngFor="
-              let types of pokemonData.types;
-              let last = last
-            "
-            [ngClass]="{ 'mr-2': !last }"
-          >
-            {{ types.type.name }}<span *ngIf="!last">, </span>
-          </span>
-        </p>
         <table class="abilities-table">
           <thead>
             <tr>

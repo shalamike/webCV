@@ -1,1 +1,26 @@
-<p>world-populations works!</p>
+
+<div class="collapsible-container" [class.collapsed-container]="isCollapsed">
+    <div
+        class="collapsible-header"
+        (click)="toggleCollapse()"
+        tabindex="0"
+        role="button"
+    >
+        <h2>World Populations</h2>
+        <p>A tool to search through world populations created myself using this database</p>
+        <span *ngIf="isCollapsed">▼</span>
+        <span *ngIf="!isCollapsed">▲</span>
+    </div>
+    
+    <div class="collapsible-content" [class.collapsed]="isCollapsed">
+        <div class="world-populations">
+            <input 
+                type = "text"
+                placeholder="Enter Country Name"
+                [(ngModel)]="searchCountry"
+                class="world-populations-input"
+                (keydown.enter)="fetchCitiesByCountry(searchCountry)"
+            />
+        </div>
+    </div>    
+</div>

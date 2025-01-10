@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { PokemonService } from '../services/pokemon.service';
 
 @Component({
@@ -10,10 +10,10 @@ export class PokemonComponent {
   searchName: string = '';
   pokemonData: any = null;
   errorMessage: string = '';
-  abilityDescriptions: { [key: string]: string } = {}; // Store ability descriptions
-  isCollapsed: any;
+  abilityDescriptions: { [key: string]: string } = {};
+  isCollapsed = true;
 
-  constructor(private pokemonService: PokemonService) {}
+  constructor(private cdr: ChangeDetectorRef, private pokemonService: PokemonService) {}
 
   fetchPokemon(): void {
     if (!this.searchName) {
@@ -21,10 +21,10 @@ export class PokemonComponent {
       this.pokemonData = null;
       return;
     }
-  
+
     this.getPokemonData(this.searchName.toLowerCase());
   }
-  
+
   private getPokemonData(name: string): void {
     this.pokemonService.getPokemonByName(name).subscribe({
       next: (data) => {
@@ -38,13 +38,13 @@ export class PokemonComponent {
       },
     });
   }
-  
+
   private fetchAbilitiesDescriptions(abilities: any[]): void {
     abilities.forEach((ability: any) => {
       this.getAbilityDescription(ability.ability.name, ability.ability.url);
     });
   }
-  
+
   private getAbilityDescription(name: string, url: string): void {
     this.pokemonService.getPokemonAbilitiesDetails(url).subscribe({
       next: (abilityData) => {
@@ -56,17 +56,22 @@ export class PokemonComponent {
       },
     });
   }
-  
+
   private extractEnglishEffect(abilityData: any): string | null {
     const effectEntry = abilityData.effect_entries.find(
       (entry: any) => entry.language.name === 'en'
     );
     return effectEntry?.effect || null;
   }
-  
 
-     // Toggles the collapsed state
-     toggleCollapse() {
-      this.isCollapsed = !this.isCollapsed;
+  toggleCollapse(): void {
+    this.isCollapsed = !this.isCollapsed;
+    if (this.isCollapsed) {
+      // Clear data when collapsed
+      this.pokemonData = null;
+      this.errorMessage = '';
+      this.abilityDescriptions = {};
     }
+    this.cdr.detectChanges(); // Trigger UI update
+  }
 }
