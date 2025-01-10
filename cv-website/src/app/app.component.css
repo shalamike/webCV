@@ -1,183 +1,231 @@
 /* General reset to apply border-box for better box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Default styling for the body */
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #e0f7fa, #ffffff); /* Light blue/teal gradient */
-    color: #333; /* Dark text color for contrast */
-    font-size: 16px; /* Base font size */
-    line-height: 1.6; /* Better readability */
-  }
-
-
-  .website-header{
-    align-items: center;
-    padding: 10px;
-  }
-
-  .website-header h1{
-    font-size: 2rem;
-    margin-left: 40%;
-    padding: auto;
-    font-family: 'Funnel', Monospace;
-  }
-
-  .website-header h2{
-    font-size: 1.5rem;
-    margin-right: 40%;
-    padding: auto;
-    font-family: 'Funnel', Monospace;
-  }
-
-  .website-clickable-links{
-    margin-left: 37.5%; ;
-    align-items: center;
-    display: flex;
-    padding: 10px;
-    font-family: 'Funnel', Monospace;
-  }
-
-  .website-clickable-links h2{
-    padding: 10px;
-    font-size: 1.5rem;
-  }
-
-
-/* Flexbox container */
-.collapsible-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 100%;
-  gap: 10px;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* Collapsible items */
+
+/* Collapsible items when not expanded */
 .collapsible-item {
-  flex: 1; /* All items are equal width initially */;
-  padding: 0px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  flex: 1 1 calc(33.33% - 20px); /* Default: 3 items per row, adjust spacing */
+  max-width: calc(33.33% - 20px);
+  transition: flex 0.3s ease, max-width 0.3s ease;
 }
 
-/* Expanded item takes the full width */
+/* Expanded collapsible item */
 .collapsible-item.expanded {
-  flex: 100%;
-  padding: 0px;
-  background-color: #f9f9f9;
+  flex: 1 1 100%;
+  max-width: 100%;
 }
 
-/* Hidden items are not displayed */
+/* Hidden collapsible items when one is expanded */
 .collapsible-item.hidden {
-  display: none;
+  display: none; /* Hide items */
 }
 
 
-/* Optional: Styling for components */
-app-tech-stack,
-app-profile,
-app-hobbies-interests-projects {
-  display: block;
-  width: 100%;
+
+/* Default styling for the body */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #e0f7fa, #ffffff);
+  /* Light blue/teal gradient */
+  color: #333;
+  /* Dark text color for contrast */
+  font-size: 16px;
+  /* Base font size */
+  line-height: 1.6;
+  /* Better readability */
 }
 
 
-  /* Dynamic font size (use root variables for scaling if needed) */
+.website-header {
+  align-items: center;
+  padding: 10px;
+}
+
+.website-header h1 {
+  font-size: 2rem;
+  margin-left: 40%;
+  padding: auto;
+  font-family: 'Funnel', Monospace;
+}
+
+.website-header h2 {
+  font-size: 1.5rem;
+  margin-right: 40%;
+  padding: auto;
+  font-family: 'Funnel', Monospace;
+}
+
+.website-clickable-links {
+  margin-left: 37.5%;
+  ;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  font-family: 'Funnel', Monospace;
+}
+
+.website-clickable-links h2 {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+/* Dynamic font size (use root variables for scaling if needed) */
+html {
+  font-size: 100%;
+  /* Default base size */
+}
+
+@media (max-width: 768px) {
   html {
-    font-size: 100%; /* Default base size */
-  }
-  
-  @media (max-width: 768px) {
-    html {
-      font-size: 90%; /* Slightly smaller on smaller screens */
+    font-size: 90%;
+
+    /* Slightly smaller on smaller screens */
+    .collapsibles-container {
+      flex-direction: column;
+      /* Stack items in a column on smaller screens */
+    }
+
+    .collapsible-item {
+      flex: 1 1 calc(100% - 20px); /* Stack items in a column */
+      max-width: calc(100% - 20px);
+    }
+
+    .website-header h1 {
+      font-size: 1.8rem;
+      /* Adjust font size for smaller screens */
+      text-align: center;
+      /* Center align header */
+    }
+
+    .website-clickable-links {
+      flex-direction: column;
+      /* Stack links vertically */
+      align-items: center;
+      /* Center align links */
+      margin-left: 0;
+      /* Remove left margin */
+    }
+
+    .website-clickable-links h2 {
+      font-size: 1.2rem;
+      /* Adjust link font size */
+      margin: 5px 0;
+      /* Add vertical spacing between links */
     }
   }
-  
-  @media (max-width: 480px) {
-    html {
-      font-size: 80%; /* Further adjust for very small screens */
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 80%;
+
+    /* Further adjust for very small screens */
+    .website-header h1 {
+      font-size: 1.5rem;
+      /* Further adjust font size for very small screens */
+    }
+
+    .website-clickable-links h2 {
+      font-size: 1rem;
+      /* Further adjust link font size */
     }
   }
-  
-  /* Style for containers to avoid sharp corners */
-  .container {
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px;
-    background: linear-gradient(to bottom, #ffffff, #f1f8e9); /* Gradient for subtle depth */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
-    margin: 10px;
+}
+
+
+
+/* Style for containers to avoid sharp corners */
+.container {
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 20px;
+  background: linear-gradient(to bottom, #ffffff, #f1f8e9);
+  /* Gradient for subtle depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for floating effect */
+  margin: 10px;
+}
+
+/* Banner styling */
+.banner {
+  background: linear-gradient(to right, #00796b, #004d40);
+  /* Teal gradient */
+  color: #fff;
+  /* White text */
+  padding: 20px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  /* Rounded bottom corners */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeOut 5s ease-in-out 1;
+  /* Fades out after 5 seconds */
+}
+
+/* H1 styling inside the banner */
+.banner h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
   }
-  
-  /* Banner styling */
-  .banner {
-    background: linear-gradient(to right, #00796b, #004d40); /* Teal gradient */
-    color: #fff; /* White text */
-    padding: 20px;
-    text-align: center;
-    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    animation: fadeOut 5s ease-in-out 1; /* Fades out after 5 seconds */
+
+  100% {
+    opacity: 0;
   }
-  
-  /* H1 styling inside the banner */
-  .banner h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  
-  /* Fade-out animation */
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  
-  /* Button styling for consistent aesthetics */
-  button {
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    background: linear-gradient(to right, #00897b, #004d40);
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  button:hover {
-    background: linear-gradient(to right, #004d40, #00897b); /* Reverse gradient on hover */
-  }
-  
-  /* Table styling */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-  }
-  
-  table th,
-  table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  table th {
-    background: linear-gradient(to right, #e0f7fa, #b2dfdb); /* Subtle gradient for headers */
-  }
-  
-  table tr:hover {
-    background-color: #f1f8e9; /* Light highlight on row hover */
-  }
+}
+
+/* Button styling for consistent aesthetics */
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: linear-gradient(to right, #00897b, #004d40);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #004d40, #00897b);
+  /* Reverse gradient on hover */
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background: linear-gradient(to right, #e0f7fa, #b2dfdb);
+  /* Subtle gradient for headers */
+}
+
+table tr:hover {
+  background-color: #f1f8e9;
+  /* Light highlight on row hover */
+}
+
+

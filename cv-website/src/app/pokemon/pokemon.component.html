@@ -61,6 +61,15 @@
         <p><strong>ID:</strong> {{ pokemonData.id }}</p>
         <p><strong>Base Experience:</strong> {{ pokemonData.base_experience }}</p>
         <p><strong>Weight:</strong> {{ pokemonData.weight }}</p>
+        <p><strong>Height:</strong> {{ pokemonData.height }}</p>
+        <p>
+          <strong>types:</strong>
+          <span *ngFor="let type of pokemonData.types">
+            {{ type.type.name }}
+            <span *ngIf="!last; else last">,</span>
+            <ng-template #last></ng-template>
+          </span>
+        </p>
         <table class="abilities-table">
           <thead>
             <tr>

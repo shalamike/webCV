@@ -24,6 +24,15 @@ export class TechStackComponent {
      // Toggles the collapsed state
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;
+
+    // Logically trigger rendering adjustments if required
+    setTimeout(() => {
+      const contentElement = document.querySelector('.collapsible-content');
+      if (this.isCollapsed && contentElement) {
+          contentElement.scrollTo(0, 0); // Reset scroll position
+      }
+  }, 300); // Match the CSS transition duration
+
   }
   
     // Update hoveredRow and hoveredColumn on mouse events

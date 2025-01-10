@@ -3,7 +3,6 @@
       class="collapsible-header" 
       [class.collapsed-header]="isCollapsed" 
       (click)="toggleCollapse()"
-      (keypress)="toggleCollapse()"
     >
       <h2>techstack</h2>
       <span *ngIf="isCollapsed">▼</span>
@@ -11,11 +10,13 @@
     </div>
   
     <div class="collapsible-content" [class.collapsed]="isCollapsed"
-    (click)="toggleCollapse()"
-    (keypress)="toggleCollapse()"
+    (click)="$event.stopPropagation()"
+    (keydown)="$event.stopPropagation()">
   >
       
-      <table class="tech-stack-table">
+      <table class="tech-stack-table"
+      (click)="$event.stopPropagation()"
+      (keydown)="$event.stopPropagation()">
         <thead>
           <th>Technology</th>
           <th>Component With</th>
