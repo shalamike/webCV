@@ -35,15 +35,4 @@ public class CountryApiExample
         SpringApplication.run(CountryApiExample.class, args);
     }
 
-
-
-//    @Bean
-//    public CommandLineRunner runner(FilmActorService filmActorService) {
-//        return args -> {
-//            for (Actor a: filmActorService.getActorsByMovieIdJPQL(6)) {
-//                logger.info(a.toString());
-//            }
-//
-//        };
-//    }
 }
