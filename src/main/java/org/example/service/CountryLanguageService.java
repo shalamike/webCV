@@ -28,7 +28,12 @@ public class CountryLanguageService {
         try{
             Optional<List<CountryLanguage>> languages = countryLanguageRepository.findLanguagesByCountryName(country);
 
-            return Optional.of(languages.get().stream().filter(CountryLanguage::getOfficial).filter(language -> language.getPercentage() >= 50f).collect(Collectors.toList()));
+            return Optional.of(languages.
+                    get().
+                    stream().
+                    filter(CountryLanguage::getOfficial).
+                    filter(language -> language.getPercentage() >= 50f).
+                    collect(Collectors.toList()));
         } catch(Exception e) {
             System.err.println("Error fetching languages " + e.getMessage());
             return Optional.empty();
