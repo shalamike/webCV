@@ -17,4 +17,14 @@ export class WorldPopulationsServiceService {
     return this.http.get<any>(this.cityUrl + "/country", { params });
   }
 
+  getCitiesWithPopulationAbove(minPopulation: number): Observable<any> {
+    const params = new HttpParams().set('minPopulation', minPopulation);
+    return this.http.get<any>(this.cityUrl + "/allpopulations", { params });
+  }
+
+  getCitiesinCountryWithPopulationAbove(country: string, minPopulation: number): Observable<any> {
+    const params = new HttpParams().set('country', country).set('minPopulation', minPopulation);
+    return this.http.get<any>(this.cityUrl + "/population", { params });
+  }
+
 }

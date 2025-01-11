@@ -11,11 +11,34 @@ export class WorldPopulationsComponent {
   searchCity: string = '';
   searchLanguage: string = '';
   isCollapsed: boolean = false;
+  searchPopulation: number = 0;
 
   constructor(private worldPopulationsService: WorldPopulationsServiceService) {}
 
   fetchCitiesByCountry(country: string): void {
     this.worldPopulationsService.getCitiesByCountry(country).subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: () => {
+        console.log('Error fetching cities');
+      }
+    });
+  }
+
+  fetchCitiesWithPopulationAbove(population: number): void {
+    this.worldPopulationsService.getCitiesWithPopulationAbove(population).subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: () => {
+        console.log('Error fetching cities');
+      }
+    });
+  }
+
+  fetchCitiesInCountryWithPopulationAbove(country: string, minPopulation: number): void {
+    this.worldPopulationsService.getCitiesinCountryWithPopulationAbove(country, minPopulation).subscribe({
       next: (data) => {
         console.log(data);
       },

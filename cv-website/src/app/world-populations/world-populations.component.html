@@ -14,13 +14,26 @@
     
     <div class="collapsible-content" [class.collapsed]="isCollapsed">
         <div class="world-populations">
-            <input 
-                type = "text"
-                placeholder="Enter Country Name"
-                [(ngModel)]="searchCountry"
-                class="world-populations-input"
-                (keydown.enter)="fetchCitiesByCountry(searchCountry)"
-            />
+            <div class = "cities-by-country">
+                <p>Search for a country to see its cities and populations</p>
+                <input 
+                    type = "text"
+                    placeholder="Enter Country Name"
+                    [(ngModel)]="searchCountry"
+                    class="world-populations-input"
+                    (keydown.enter)="fetchCitiesByCountry(searchCountry)"
+                />
+            </div>
+            <div class="cities-by-population">
+                <p>enter a population to see cities with a population greater than the value you entered</p>
+                <input 
+                    type = "number"
+                    placeholder="Enter Population"
+                    [(ngModel)]="searchPopulation"
+                    class="world-populations-input"
+                    (keydown.enter)="fetchCitiesWithPopulationAbove(searchPopulation)"
+                />
+            </div>
         </div>
     </div>    
 </div>

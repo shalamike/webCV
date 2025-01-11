@@ -1,8 +1,8 @@
-<div class="collapsible-container" [class.collapsed-container]="isCollapsed">
+<div class="collapsible-container" [class.collapsed-container]="isCollapsed"
+(click)="toggleCollapse()">
     <div 
       class="collapsible-header" 
       [class.collapsed-header]="isCollapsed" 
-      (click)="toggleCollapse()"
     >
       <h2>techstack</h2>
       <span *ngIf="isCollapsed">▼</span>
@@ -17,12 +17,16 @@
       <table class="tech-stack-table"
       (click)="$event.stopPropagation()"
       (keydown)="$event.stopPropagation()">
-        <thead>
+        <thead
+        (click)="$event.stopPropagation()"
+        (keydown)="$event.stopPropagation()">
           <th>Technology</th>
           <th>Component With</th>
           <th>Experienced With</th>
         </thead>
-        <tbody>
+        <tbody
+        (click)="$event.stopPropagation()"
+        (keydown)="$event.stopPropagation()">
           <tr
             *ngFor="let skill of skills; let rowIndex = index"
             [class.highlight-row]="hoveredRow === rowIndex"

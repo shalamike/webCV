@@ -1,0 +1,35 @@
+
+
+
+.collapsible-container {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    max-width: 420px;
+    transition: max-height 0.3s ease;
+  }
+  
+  .collapsible-header {
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #f4f3d6;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  .collapsible-content {
+    overflow: hidden;
+    max-height: 100%;
+    transition: max-height 0.3s ease;
+  }
+  
+  .collapsible-content.collapsed {
+    max-height: 0;
+    padding: 0;
+  }

@@ -3,7 +3,6 @@
     <div class="collapsible-header" 
     [class.collapsed-header]="isCollapsed" 
         (click)="toggleCollapse()"
-        (keydown)="toggleCollapse()"
         >
       <h2 class = "experience-header">
         Experience and Qualifications
@@ -11,7 +10,10 @@
       <span *ngIf="isCollapsed">▼</span>
         <span *ngIf="!isCollapsed">▲</span>
   
-      <div class="collapsible-content" [class.collapsed]="isCollapsed">
+      <div class="collapsible-content" 
+      [class.collapsed]="isCollapsed"
+      (click)="$event.stopPropagation()"
+      (keydown)="$event.stopPropagation()">
         <div class="experience-list">
           <h3>Valcon | Technology Consultant | September 2023 –February 2024  | </h3>
           <ul>
