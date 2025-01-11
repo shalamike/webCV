@@ -10,7 +10,7 @@ export class WorldPopulationsComponent {
   searchCountry: string = '';
   searchCity: string = '';
   searchLanguage: string = '';
-  isCollapsed: boolean = false;
+  isCollapsed: boolean = true;
   searchPopulation: number = 0;
 
   constructor(private worldPopulationsService: WorldPopulationsServiceService) {}

@@ -40,41 +40,31 @@ body {
 }
 
 
-.website-header {
-  align-items: center;
-  padding: 10px;
-}
 
 .website-header h1 {
+  align-items: center;
+  text-align: center;
+  padding: 10px;
   font-size: 2rem;
-  margin-left: 40%;
   padding: auto;
   font-family: 'Funnel', Monospace;
 }
 
-.website-header h2 {
-  font-size: 1.5rem;
-  margin-right: 40%;
-  padding: auto;
-  font-family: 'Funnel', Monospace;
-}
 
 .website-clickable-links {
-  margin-left: 37.5%;
-  ;
   align-items: center;
-  display: flex;
+  text-align: center;
   padding: 10px;
   font-family: 'Funnel', Monospace;
 }
 
-.website-clickable-links h2 {
+.website-clickable-links h2 a {
+  display: block;
+  align-items: center;
+  text-align: center;
   padding: 10px;
   font-size: 1.5rem;
 }
-
-
-
 
 
 /* Dynamic font size (use root variables for scaling if needed) */
