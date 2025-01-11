@@ -1,9 +1,9 @@
-<div class="collapsible-container" [class.collapsed-container]="isCollapsed">
+<div class="collapsible-container" [class.collapsed-container]="isCollapsed"
+(click)="toggleCollapse()"
+(keydown)="toggleCollapse()">
   <div
     class="collapsible-header"
     [class.collapsed-header]="isCollapsed"
-    (click)="toggleCollapse()"
-    (keydown)="toggleCollapse()"
   >
     <h2 class="hobbies-interests-projects-header">
       Hobbies, Interests, and Projects
@@ -19,24 +19,15 @@
     >
       <!-- This stops the event from bubbling up to the parent element -->
 
-      <div class="collapsibles-container">
+      <div class="collapsibles-container"
+      (click)="$event.stopPropagation()"
+      (keydown)="$event.stopPropagation()">
         <app-pokemon></app-pokemon>
 
         <!-- world populations-->
-        <div
-          class="collapsible-item"
-          [ngClass]="{
-            expanded: isExpanded === 'worldpopulations',
-            hidden: isExpanded && isExpanded !== 'worldpopulations'
-          }"
-          (click)="toggleExpand('worldpopulations')"
-        >
-          <app-world-populations></app-world-populations>
-          <span
-            class="label"
-            *ngIf="!isExpanded || isExpanded !== 'worldpopulations'"
-          ></span>
-        </div>
+        <app-world-populations></app-world-populations>
+
+  
       </div>
     </div>
   </div>
