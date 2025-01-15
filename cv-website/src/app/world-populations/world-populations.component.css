@@ -34,3 +34,14 @@
     max-height: 0;
     padding: 0;
   }
+
+
+  .city-populations{
+    margin: auto;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  p {
+    max-width: 95%;
+  }
