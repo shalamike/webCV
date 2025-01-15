@@ -123,7 +123,7 @@
     list-style-type: none;
   }
   li:hover{
-    list-style-type: disc;
+    list-style-type: none;
     margin: auto;
     padding: 10px;
     font-size: 1rem;

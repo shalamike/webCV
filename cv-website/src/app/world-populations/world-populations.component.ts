@@ -12,38 +12,59 @@ export class WorldPopulationsComponent {
   searchLanguage: string = '';
   isCollapsed: boolean = true;
   searchPopulation: number = 0;
+  countryData: any = null;
+  errorMessage: string = '';
 
   constructor(private worldPopulationsService: WorldPopulationsServiceService) {}
 
-  fetchCitiesByCountry(country: string): void {
-    this.worldPopulationsService.getCitiesByCountry(country).subscribe({
-      next: (data) => {
-        console.log(data);
-      },
-      error: () => {
-        console.log('Error fetching cities');
-      }
-    });
-  }
+  // fetchCitiesByCountry(country: string): void {
+  //   this.worldPopulationsService.getCitiesByCountry(country).subscribe({
+  //     next: (data) => {
+  //       // console.log(data);
+  //       this.countryData = data;
+  //     },
+  //     error: () => {
+  //       // console.log('Error fetching cities');
+  //       this.errorMessage = 'Country not found!';
+  //       this.countryData = null;
+  //       return;
+  //     }
+  //   });
+  // }
 
-  fetchCitiesWithPopulationAbove(population: number): void {
-    this.worldPopulationsService.getCitiesWithPopulationAbove(population).subscribe({
-      next: (data) => {
-        console.log(data);
-      },
-      error: () => {
-        console.log('Error fetching cities');
-      }
-    });
-  }
+  // fetchCitiesWithPopulationAbove(population: number): void {
+  //   this.worldPopulationsService.getCitiesWithPopulationAbove(population).subscribe({
+  //     next: (data) => {
+  //       console.log(data);
+  //     },
+  //     error: () => {
+  //       console.log('Error fetching cities');
+  //     }
+  //   });
+  // }
 
-  fetchCitiesInCountryWithPopulationAbove(country: string, minPopulation: number): void {
-    this.worldPopulationsService.getCitiesinCountryWithPopulationAbove(country, minPopulation).subscribe({
+  // fetchCitiesInCountryWithPopulationAbove(country: string, minPopulation: number): void {
+  //   this.worldPopulationsService.getCitiesinCountryWithPopulationAbove(country, minPopulation).subscribe({
+  //     next: (data) => {
+  //       console.log(data);
+  //     },
+  //     error: () => {
+  //       console.log('Error fetching cities');
+  //     }
+  //   });
+  // }
+
+  fetchCountryByName(country: string): void {
+    this.worldPopulationsService.getCountryByName(country).subscribe({
       next: (data) => {
         console.log(data);
+        this.countryData = data;
       },
       error: () => {
-        console.log('Error fetching cities');
+        console.log('Error fetching country');
+        this.errorMessage = 'Country not found!';
+        this.countryData = null;
+        return;
       }
     });
   }
