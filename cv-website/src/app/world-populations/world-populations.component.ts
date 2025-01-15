@@ -14,6 +14,7 @@ export class WorldPopulationsComponent {
   searchPopulation: number = 0;
   countryData: any = null;
   errorMessage: string = '';
+  last: any;
 
   constructor(private worldPopulationsService: WorldPopulationsServiceService) {}
 

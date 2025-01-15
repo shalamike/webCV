@@ -31,7 +31,19 @@
                 <div *ngIf="countryData" class="country-card">
                     <h2>{{ countryData.country.name | titlecase }}</h2>
                     <p>Population: {{ countryData.country.population | number }}</p>
-                    <p>Urban Population : {{countryData.totalUrbanPopulation}}</p>
+                    <p>Urban Population : {{countryData.totalUrbanPopulation | number}}</p>
+                    <p>Rural Population : {{countryData.country.population - countryData.totalUrbanPopulation | number}}</p>
+                    <p>Languages Spoken:
+                        <ng-container *ngFor="let language of countryData.country.languages; let last = last">
+                            {{language.language}} <span *ngIf="!last">,</span>
+                        </ng-container>
+                    </p>
+                    <p> Official Language:
+                        <span *ngFor="let language of countryData.country.languages">
+                            <span *ngIf="language.official === true">{{language.language}}</span>
+                        </span>                        
+                    </p>
+
                     <table class="city-populations">
                         <thead>
                             <tr>
