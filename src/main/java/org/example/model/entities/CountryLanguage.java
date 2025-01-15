@@ -11,6 +11,7 @@ import java.util.Objects;
 public class CountryLanguage {
 
     @EmbeddedId
+    @JsonIgnore
     private CountryLanguageId id;
 
     @ManyToOne
