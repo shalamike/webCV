@@ -21,7 +21,7 @@
     width: 100%;
     border: 2px solid #ddd; /* Adds a border */
     border-radius: 8px; /* Optional rounded corners */
-    transition: width 0.3s ease, border-color 0.3s ease; /* Smooth transition for width and border */
+    transition: width 0.1s ease, border-color 0.1s ease; /* Smooth transition for width and border */
     transform-origin: center; /* Center the transform animation */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
     display: flex;
@@ -109,6 +109,22 @@
       }
       li:hover{
         font-size: 0.7rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    html{
+      font-size: 40%;
+    }
+  }
+
+  
+  @media (max-width: 240px) {
+    html{
+      .collapsible-header{
+        color: transparent; /* make the text invisible */
+        user-select: none; /* prevent selection of the text */
       }
     }
   }
