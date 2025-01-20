@@ -8,8 +8,8 @@
 
 /* Collapsible items when not expanded */
 .collapsible-item {
-  flex: 1 1 calc(33.33% - 20px); /* Default: 3 items per row, adjust spacing */
-  max-width: calc(33.33% - 20px);
+  flex: 1 1 calc(25% ); 
+  max-width: calc(25%);
   transition: flex 0.3s ease, max-width 0.3s ease;
 }
 
