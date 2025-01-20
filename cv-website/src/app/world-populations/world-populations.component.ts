@@ -14,7 +14,6 @@ export class WorldPopulationsComponent {
   searchPopulation: number = 0;
   countryData: any = null;
   errorMessage: string = '';
-  last: any;
 
   constructor(private worldPopulationsService: WorldPopulationsServiceService) {}
 
@@ -62,8 +61,13 @@ export class WorldPopulationsComponent {
         this.countryData = data;
       },
       error: () => {
-        console.log('Error fetching country');
-        this.errorMessage = 'Country not found!';
+        if (country === '') {
+          this.errorMessage = 'Please enter a country!';
+        } else if (country === ' ') {
+          this.errorMessage = 'Country not found!';
+        } else {
+          this.errorMessage = 'api is either not turned, please contact the website owner.';
+        }
         this.countryData = null;
         return;
       }
