@@ -15,7 +15,7 @@ export class PokemonService {
   }
 
   getPokemonAbilitiesDetails(url: string): Observable<any> {
-    return this.http.get<any>(url)
+    return this.http.get<any>(url);
   }
 
 

@@ -1,108 +1,84 @@
 
-.collapsible {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1em;
-    text-align: center;
-  }
-  
-  .collapsible-header {
-    padding: 0.5em;
-    cursor: pointer;
-    user-select: none;
-    font-family: 'Funnel', Monospace;
-    text-align: center;
-    font-size: 1rem;
-  }
-  
-  .collapsible-container {
-    width: 100%;
-    border: 2px solid #ddd; /* Adds a border */
-    border-radius: 8px; /* Optional rounded corners */
-    transition: width 0.1s ease, border-color 0.1s ease; /* Smooth transition for width and border */
-    transform-origin: center; /* Center the transform animation */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    gap: 10px; /* Add spacing between items */
-    justify-content: space-evenly; /* Space items evenly */
-  }
-  .projects-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    gap: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  /* Collapsed container */
-  .collapsible-container.collapsed-container {
-    width: 100%; /* Reduce width when collapsed */
-    margin: 0;
-  }
-  
-  
-  /* Collapsed header */
-  .collapsible-header.collapsed-header {
-    width: 95%; /* Match container width when collapsed */
-  }
-  
+h1, h2, h3, h4, h5, h6, p, a, li{
+  font-family: 'Funnel', Monospace;
+}
 
-  
-  /* Collapsible content */
-  .collapsible-content {
-    max-height: 100%;
-    overflow: auto;
-  transition: max-height 0.3s ease;
-  }
-  
-  .collapsible-content.collapsed {
-  max-height: 0;
-  padding: 0 !important;
-  transition: max-height 0.3s ease;
-  overflow: hidden;
-  }
+h2{
+  font-size: 1.5rem;
+}
 
-  
 
-  .collapsibles-container {
-    display: flex;
-    flex-direction: row; /* Default: items in a row */
-    width: 100%;
-    gap: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
+/* Button styling for consistent aesthetics */
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: linear-gradient(to right, #00897b, #004d40);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
+button:hover {
+  background: linear-gradient(to right, #004d40, #00897b);
+  /* Reverse gradient on hover */
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background: linear-gradient(to right, #e0f7fa, #b2dfdb);
+  /* Subtle gradient for headers */
+}
+
+table tr:hover {
+  background-color: #f1f8e9;
+  /* Light highlight on row hover */
+}
+
+.website-clickable-links a{
+  width: 100%;
+  height: 20px;
+}
+
+/* collapsible styling */
+
+
+.collapsible-header {
+  padding: 0.5em;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  font-size: 1rem;
+
+}
+
+/* The container in which the four collapsible components on the main web page are held */
+.collapsibles-container{
+  display: flex;
+  flex-direction: row; /* Default: items in a row */
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
 
   @media (max-width: 768px) {
     html {
       font-size: 90%;
 
-      .collapsible-header{
-        font-size: 0.7rem;
-      }
-
-      .collapsible-content{
-        font-size: 0.7rem;
-      }
-  
-      /* Slightly smaller on smaller screens */
-      .collapsibles-container {
-        flex-direction: column;
-        align-items: center;
-        /* Stack items in a column on smaller screens */
-      }
-  
-      .collapsible-item {
-        flex: 1 1 calc(100% - 20px); /* Stack items in a column */
-        max-width: calc(100% - 20px);
-      }
 
       li{
         font-size: 0.7rem;
@@ -115,7 +91,8 @@
 
   @media (max-width: 480px) {
     html{
-      font-size: 40%;
+      font-size: 60%;
+
     }
   }
 
