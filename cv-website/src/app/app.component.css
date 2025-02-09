@@ -5,27 +5,6 @@
   box-sizing: border-box;
 }
 
-
-/* Collapsible items when not expanded */
-.collapsible-item {
-  flex: 1 1 calc(25% ); 
-  max-width: calc(25%);
-  transition: flex 0.3s ease, max-width 0.3s ease;
-}
-
-/* Expanded collapsible item */
-.collapsible-item.expanded {
-  flex: 1 1 100%;
-  max-width: 100%;
-}
-
-/* Hidden collapsible items when one is expanded */
-.collapsible-item.hidden {
-  display: none; /* Hide items */
-}
-
-
-
 /* Default styling for the body */
 body {
   font-family: Arial, sans-serif;
@@ -75,17 +54,9 @@ html {
 @media (max-width: 768px) {
   html {
     font-size: 90%;
+  }
 
-    /* Slightly smaller on smaller screens */
-    .collapsibles-container {
-      flex-direction: column;
-      /* Stack items in a column on smaller screens */
-    }
 
-    .collapsible-item {
-      flex: 1 1 calc(100% - 20px); /* Stack items in a column */
-      max-width: calc(100% - 20px);
-    }
 
     .website-header h1 {
       font-size: 1.8rem;
@@ -109,7 +80,7 @@ html {
       margin: 5px 0;
       /* Add vertical spacing between links */
     }
-  }
+
 }
 
 @media (max-width: 480px) {
