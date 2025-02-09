@@ -130,7 +130,7 @@ table tr:hover {
   
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     html {
       font-size: 90%;
 
