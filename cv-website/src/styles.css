@@ -113,6 +113,19 @@ table tr:hover {
     }
 
 
+    /* hiding collapsibles when one is expanded */
+    
+/* Expanded collapsible item */
+.collapsible-item.expanded {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+/* Hidden collapsible items when one is expanded */
+.collapsible-item.hidden {
+  display: none; /* Hide items */
+}
+
     
   
 
