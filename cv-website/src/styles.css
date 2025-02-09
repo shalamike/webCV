@@ -75,6 +75,48 @@ table tr:hover {
   box-sizing: border-box;
 }
 
+
+  /* Collapsible content */
+
+
+  .collapsible {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .collapsible-content {
+    max-height: 100%;
+    overflow: auto;
+  transition: max-height 0.3s ease;
+  }
+
+  .collapsible-content.collapsed {
+    max-height: 0;
+    padding: 0 !important;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    }
+
+/* the container in which each collapsible component is held*/
+    .collapsible-container {
+      flex: 1; /* Ensures all collapsibles are equal width */
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      transition: width 0.3s ease, border-color 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    
+  
+
+
   @media (max-width: 768px) {
     html {
       font-size: 90%;
