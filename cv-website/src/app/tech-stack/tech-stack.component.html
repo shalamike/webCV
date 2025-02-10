@@ -1,10 +1,12 @@
-<div class="collapsible-container" [class.collapsed-container]="isCollapsed"
-(click)="toggleCollapse()">
+<div class="collapsible-container" 
+[class.collapsed-container]="isCollapsed"
+>
     <div 
       class="collapsible-header" 
-      [class.collapsed-header]="isCollapsed" 
+      [class.collapsed-header]="isCollapsed"
+      (click)="toggleCollapse()" 
     >
-      <h2>techstack</h2>
+      <h2>Techstack</h2>
       <span *ngIf="isCollapsed">▼</span>
       <span *ngIf="!isCollapsed">▲</span>
     </div>
