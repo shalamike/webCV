@@ -1,25 +1,4 @@
 /* General reset to apply border-box for better box-sizing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-
-
-/* Default styling for the body */
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(120deg, #e0f7fa, #ffffff);
-  /* Light blue/teal gradient */
-  color: #333;
-  /* Dark text color for contrast */
-  font-size: 16px;
-  /* Base font size */
-  line-height: 1.6;
-  /* Better readability */
-}
 
 
 
