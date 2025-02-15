@@ -138,6 +138,10 @@
         max-width: max-content;
         /* Stack items in a column on smaller screens */
       }
+
+      .collapsible-container {
+        flex-direction: column;
+      }
   
       .collapsible-item {
         flex: 1 1 calc(100% - 20px); /* Stack items in a column */
