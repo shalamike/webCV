@@ -99,7 +99,6 @@
   display: none; /* Hide items */
 }
 
-
 .website-clickable-links {
   padding: 10px;
   display: flex;
@@ -118,14 +117,15 @@
       font-size: 90%;
     }
 
-    .collapsible-container{
-      width: 100%;
-      box-sizing:content-box;
-    }
 
       .collapsible-header{
         font-size: 0.7rem;
       }
+
+      .collapsible-item{
+        width: 100%;
+      }
+      
 
       .collapsible-content{
         font-size: 0.7rem;
