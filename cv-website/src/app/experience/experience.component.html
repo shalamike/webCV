@@ -7,8 +7,8 @@
       <h2 class = "experience-header">
         Experience and Qualifications
       </h2>
-      <span *ngIf="isCollapsed">▼</span>
-        <span *ngIf="!isCollapsed">▲</span>
+      <span *ngIf="isCollapsed">▼ click or tap on the title to expand section</span>
+      <span *ngIf="!isCollapsed">▲ click or tap on the title to collapse section and return to home</span>
   
       <div class="collapsible-content" 
       [class.collapsed]="isCollapsed"

@@ -1,12 +1,14 @@
-<div class="collapsible-container" [class.collapsed-container]="isCollapsed"
-(click)="toggleCollapse()">
+<div class="collapsible-container" 
+[class.collapsed-container]="isCollapsed"
+>
     <div 
       class="collapsible-header" 
-      [class.collapsed-header]="isCollapsed" 
+      [class.collapsed-header]="isCollapsed"
+      (click)="toggleCollapse()" 
     >
-      <h2>techstack</h2>
-      <span *ngIf="isCollapsed">▼</span>
-      <span *ngIf="!isCollapsed">▲</span>
+      <h2>Techstack</h2>
+      <span *ngIf="isCollapsed">▼ click or tap on the title to expand section</span>
+      <span *ngIf="!isCollapsed">▲ click or tap on the title to collapse section and return to home</span>
     </div>
   
     <div class="collapsible-content" [class.collapsed]="isCollapsed"
@@ -43,7 +45,7 @@
               (mouseleave)="onMouseLeaveCell()"
               [class.highlight-cell]="hoveredColumn === 1"
             >
-              {{ skill.componentWith }}
+              {{ skill.componentWith }}89+
             </td>
             <td
               (mouseenter)="onMouseEnterCell(rowIndex, 2)"

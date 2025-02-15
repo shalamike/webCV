@@ -57,7 +57,7 @@
   
   @media (max-width: 768px) {
     .tech-stack-table {
-      font-size: 14px;
+      font-size: 0.7rem;
     }
   
     .tech-stack-table thead {
