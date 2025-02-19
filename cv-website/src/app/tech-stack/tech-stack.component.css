@@ -57,11 +57,7 @@
   
   @media (max-width: 768px) {
     .tech-stack-table {
-      font-size: 0.7rem;
-    }
-  
-    .tech-stack-table thead {
-      display: none; /* Hide the table header on smaller screens */
+      font-size: 0.85rem;
     }
   
     .tech-stack-table tbody tr {
