@@ -11,6 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { HobbiesInterestsProjectsComponent } from './hobbies-interests-projects/hobbies-interests-projects.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { HobbiesInterestsProjectsComponent } from './hobbies-interests-projects/
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

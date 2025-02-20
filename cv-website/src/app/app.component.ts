@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChildren, QueryList } from '@angular/core';
+import { MatExpansionPanel } from '@angular/material/expansion';
+
 
 @Component({
   selector: 'app-root',
@@ -7,13 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cv-website';
-  isExpanded: string | null = null;
+// Get a QueryList of all MatExpansionPanel components
+@ViewChildren(MatExpansionPanel) panels!: QueryList<MatExpansionPanel>;
 
-  toggleExpand(component: string) {
-    // Toggle between expanded and collapsed state
-    this.isExpanded = this.isExpanded === component ? null : component;
+expandAll(): void {
+  this.panels.forEach(panel => panel.open());
+}
 
-  }
+collapseAll(): void {
+  this.panels.forEach(panel => panel.close());
+}
 }
 
 

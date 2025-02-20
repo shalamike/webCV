@@ -3,79 +3,67 @@
 </div>
 
 <div class="website-clickable-links">
-  <h2>
-    <a href="https://www.linkedin.com/in/michael-shalaby-535977129/"
-      >LinkedIn</a
-    >
-  </h2>
-  <h2>
-    <a href="https://github.com/shalamike">GitHub</a>
-  </h2>
-  <h2>
-    <a
-      href="https://drive.google.com/file/d/1zepFJigPrVntvxkc8_NFSQH_OMzbzAlo/view?usp=sharing"
-      >CV</a
-    >
-  </h2>
+  <a
+    mat-raised-button
+    class="website-button"
+    href="https://www.linkedin.com/in/michael-shalaby-535977129/"
+    target="_blank"
+  >
+    LinkedIn
+  </a>
+  <a
+    mat-raised-button
+    class="website-button"
+    href="https://github.com/shalamike"
+    target="_blank"
+  >
+    GitHub
+  </a>
+  <a
+    mat-raised-button
+    class="website-button"
+    href="https://drive.google.com/file/d/1zepFJigPrVntvxkc8_NFSQH_OMzbzAlo/view?usp=sharing"
+    target="_blank"
+  >
+    CV
+  </a>
 </div>
 
-<div class="collapsibles-container">
+<div class="accordion-controls" style="text-align: center; margin-bottom: 10px;">
+  <button mat-raised-button color="primary" (click)="expandAll()">Expand All</button>
+  <button mat-raised-button color="warn" (click)="collapseAll()">Collapse All</button>
+</div>
+
+<mat-accordion multi="true">
   <!-- Tech Stack -->
-  <div
-    class="collapsible-item"
-    [ngClass]="{
-      expanded: isExpanded === 'techStack',
-      hidden: isExpanded && isExpanded !== 'techStack'
-    }"
-    (click)="toggleExpand('techStack')"
-  >
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Tech Stack </mat-panel-title>
+    </mat-expansion-panel-header>
     <app-tech-stack></app-tech-stack>
-    <span
-      class="label"
-      *ngIf="!isExpanded || isExpanded !== 'techStack'"
-    ></span>
-  </div>
-  <!-- Profile -->
-  <div
-    class="collapsible-item"
-    [ngClass]="{
-      expanded: isExpanded === 'profile',
-      hidden: isExpanded && isExpanded !== 'profile'
-    }"
-    (click)="toggleExpand('profile')"
-  >
-    <app-profile></app-profile>
-    <span class="label" *ngIf="!isExpanded || isExpanded !== 'profile'"></span>
-  </div>
-  <!-- Experience -->
-  <div
-    class="collapsible-item"
-    [ngClass]="{
-      expanded: isExpanded === 'experience',
-      hidden: isExpanded && isExpanded !== 'experience'
-    }"
-    (click)="toggleExpand('experience')"
-  >
-    <app-experience></app-experience>
-    <span
-      class="label"
-      *ngIf="!isExpanded || isExpanded !== 'experience'"
-    ></span>
-  </div>
-  <!-- Hobbies, Interests, and Projects -->
-  <div
-    class="collapsible-item"
-    [ngClass]="{
-      expanded: isExpanded === 'hobbies-interests-projects',
-      hidden: isExpanded && isExpanded !== 'hobbies-interests-projects'
-    }"
-    (click)="toggleExpand('hobbies-interests-projects')"
-  >
-    <app-hobbies-interests-projects></app-hobbies-interests-projects>
-    <span
-      class="label"
-      *ngIf="!isExpanded || isExpanded !== 'hobbies-interests-projects'"
-    ></span>
-  </div>
-</div>
+  </mat-expansion-panel>
 
+  <!-- Profile -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Profile </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-profile></app-profile>
+  </mat-expansion-panel>
+
+  <!-- Experience -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Experience </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-experience></app-experience>
+  </mat-expansion-panel>
+
+  <!-- Hobbies, Interests, and Projects -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Hobbies, Interests, and Projects </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-hobbies-interests-projects></app-hobbies-interests-projects>
+  </mat-expansion-panel>
+</mat-accordion>

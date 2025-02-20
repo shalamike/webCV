@@ -1,62 +1,45 @@
-<div class="collapsible-container" 
-[class.collapsed-container]="isCollapsed"
->
-    <div 
-      class="collapsible-header" 
-      [class.collapsed-header]="isCollapsed"
-      (click)="toggleCollapse()" 
+
+
+
+
+    <table
+      class="tech-stack-table"
     >
-      <h2>Techstack</h2>
-      <span *ngIf="isCollapsed">▼ click or tap on the title to expand section</span>
-      <span *ngIf="!isCollapsed">▲ click or tap on the title to collapse section and return to home</span>
-    </div>
-  
-    <div class="collapsible-content" [class.collapsed]="isCollapsed"
-    (click)="$event.stopPropagation()"
-    (keydown)="$event.stopPropagation()">
-  >
-      
-      <table class="tech-stack-table"
-      (click)="$event.stopPropagation()"
-      (keydown)="$event.stopPropagation()">
-        <thead
-        (click)="$event.stopPropagation()"
-        (keydown)="$event.stopPropagation()">
-          <th>Technology</th>
-          <th>Component With</th>
-          <th>Experienced With</th>
-        </thead>
-        <tbody
-        (click)="$event.stopPropagation()"
-        (keydown)="$event.stopPropagation()">
-          <tr
-            *ngFor="let skill of skills; let rowIndex = index"
-            [class.highlight-row]="hoveredRow === rowIndex"
+      <thead
+      >
+        <th>Technology</th>
+        <th>Component With</th>
+        <th>Experienced With</th>
+      </thead>
+      <tbody
+      >
+        <tr
+          *ngFor="let skill of skills; let rowIndex = index"
+          [class.highlight-row]="hoveredRow === rowIndex"
+        >
+          <td
+            (mouseenter)="onMouseEnterCell(rowIndex, 0)"
+            (mouseleave)="onMouseLeaveCell()"
+            [class.highlight-cell]="hoveredColumn === 0"
           >
-            <td
-              (mouseenter)="onMouseEnterCell(rowIndex, 0)"
-              (mouseleave)="onMouseLeaveCell()"
-              [class.highlight-cell]="hoveredColumn === 0"
-            >
-              {{ skill.technology }}
-            </td>
-            <td
-              (mouseenter)="onMouseEnterCell(rowIndex, 1)"
-              (mouseleave)="onMouseLeaveCell()"
-              [class.highlight-cell]="hoveredColumn === 1"
-            >
-              {{ skill.componentWith }}89+
-            </td>
-            <td
-              (mouseenter)="onMouseEnterCell(rowIndex, 2)"
-              (mouseleave)="onMouseLeaveCell()"
-              [class.highlight-cell]="hoveredColumn === 2"
-            >
-              {{ skill.experiencedWith }}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  
+            {{ skill.technology }}
+          </td>
+          <td
+            (mouseenter)="onMouseEnterCell(rowIndex, 1)"
+            (mouseleave)="onMouseLeaveCell()"
+            [class.highlight-cell]="hoveredColumn === 1"
+          >
+            {{ skill.componentWith }}89+
+          </td>
+          <td
+            (mouseenter)="onMouseEnterCell(rowIndex, 2)"
+            (mouseleave)="onMouseLeaveCell()"
+            [class.highlight-cell]="hoveredColumn === 2"
+          >
+            {{ skill.experiencedWith }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+

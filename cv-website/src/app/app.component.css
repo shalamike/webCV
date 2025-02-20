@@ -37,11 +37,11 @@ body {
   font-family: 'Funnel', Monospace;
 }
 
-.website-clickable-links h2 a {
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  font-size: 1.5rem;
+.website-button {
+  background-color: rgb(237, 237, 237) !important; /* Flat light-grey color */
+  color: black !important; /* Ensures text is visible */
+  border-radius: 8px; /* Optional: Adjust rounded corners */
+  margin: 3%;
 }
 
 
