@@ -11,6 +11,8 @@
     padding: 10px;
   }
 
-  ul :hover{
-    background-color: #dbedfd;
+  h3{
+    border-radius: 10px;
+    text-align: center;
+    background-image:linear-gradient(to right, #a8e6ff, #e9f9ff,#a8e6ff); 
   }
