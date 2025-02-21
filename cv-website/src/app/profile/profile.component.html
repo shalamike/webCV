@@ -1,32 +1,15 @@
-<div class="collapsible-container" [class.collapsed-container]="isCollapsed">
-  <div class="collapsible-header" 
-  [class.collapsed-header]="isCollapsed" 
-      (click)="toggleCollapse()"
-      (keydown)="toggleCollapse()"
-      >
-    <h2 class = "profileHeader">
-      Profile
-    </h2>
-    <span *ngIf="isCollapsed">▼ click or tap on the title to expand section</span>
-      <span *ngIf="!isCollapsed">▲click or tap on the title to collapse section and return to home</span>
-
-    <div class="collapsible-content" [class.collapsed]="isCollapsed">
-      <ul class="profile-list">
-        <li>
-          A Full Stack developer with a keen interest in backend technologies. Utilised Java/Spring Boot, SQL, 
-          SonarCube and Flyway on a clients API, while also working on the frontend using Typescript/Angular. 
-        </li>
-        <li>
-          Completed a Postgraduate diploma in Computer Science at Birkbeck University. Completed a project 
-          using Java and LibGDX to create a Bouncing Bomb Simulator for Android. Modules included Web 
-        technologies, principles of programming, Computer Systems and Database Management. 
-        </li>
-        <li>
-          Collaborated effectively in groups using Scrum methodologies at Valcon and Kanban while at Sparta 
-          Global and Infosys. Technologies used include Jira, MS Teams and Slack.
-        </li>
-      </ul>
-    </div>
-    
-    </div>
-</div>
+<ul class="profile-list">
+  <li>
+    A Full Stack developer with a keen interest in backend technologies. Utilised Java/Spring Boot, SQL, 
+    SonarCube and Flyway on a clients API, while also working on the frontend using Typescript/Angular. 
+  </li>
+  <li>
+    Completed a Postgraduate diploma in Computer Science at Birkbeck University. Completed a project 
+    using Java and LibGDX to create a Bouncing Bomb Simulator for Android. Modules included Web 
+  technologies, principles of programming, Computer Systems and Database Management. 
+  </li>
+  <li>
+    Collaborated effectively in groups using Scrum methodologies at Valcon and Kanban while at Sparta 
+    Global and Infosys. Technologies used include Jira, MS Teams and Slack.
+  </li>
+</ul>

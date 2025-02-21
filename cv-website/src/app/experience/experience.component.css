@@ -9,5 +9,8 @@
   .experience-list li{
     margin: 10px;
     padding: 10px;
-    font-family: 'Funnel', Monospace;;
+  }
+
+  ul :hover{
+    background-color: #dbedfd;
   }

@@ -1,9 +1,13 @@
 
 
+*{
+  font-family: 'Funnel', Monospace;
+}
 
+body {
+  background: linear-gradient(to bottom, #add8e6, #ffffff);
+}
 
-.website-button {
-    background-color: rgb(237, 237, 237) !important; /* Flat light-grey color */
-    color: black !important; /* Ensures text is visible */
-    border-radius: 8px; /* Optional: Adjust rounded corners */
-  }
+ul :hover{
+  background-color: #dbedfd;
+}
