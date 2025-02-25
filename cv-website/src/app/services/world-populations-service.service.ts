@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WorldPopulationsServiceService {
-  private baseUrl = 'http://10.0.0.1:5000/api';
+  private baseUrl = 'http://192.168.1.111:5000/api';
   private cityUrl = this.baseUrl + '/cities';
   private countryUrl = this.baseUrl + '/countries';
   

@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="modified main page so that clickable links are centered. modified the world-populations.component to be collapsed by default&#10;tweaked list styling so that they are more responsive to small screens">
-      <change afterPath="$PROJECT_DIR$/taskexpert/src/main/java/com/taskexpert/taskexpert/service/GroupMembershipService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/taskexpert/src/main/java/com/taskexpert/taskexpert/service/GroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/taskexpert/src/main/java/com/taskexpert/taskexpert/service/TodoAssignmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/taskexpert/src/main/java/com/taskexpert/taskexpert/service/TodoDependancyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/taskexpert/src/main/java/com/taskexpert/taskexpert/service/TodoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/taskexpert/src/main/java/com/taskexpert/taskexpert/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/taskexpert/src/test/java/com/taskexpert/taskexpert/service/UserServiceTest.java" afterDir="false" />
+    <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="fixed some typos and adjusted website background to be more consistent with different sizes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/src/app/hobbies-interests-projects/hobbies-interests-projects.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/hobbies-interests-projects/hobbies-interests-projects.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/src/app/pokemon/pokemon.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/pokemon/pokemon.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/src/app/world-populations/world-populations.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/world-populations/world-populations.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv-website/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv-website/dist/main.d1f090980838d3f2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv-website/dist/styles.87fe441fc9f1f15f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv-website/src/app/services/world-populations-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/services/world-populations-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +26,17 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="overhaul3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.13/tomcat-embed-websocket-10.1.13.jar!/org/apache/tomcat/websocket/server/WsFilter.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.0.12/spring-web-6.0.12.jar!/org/springframework/web/filter/OncePerRequestFilter.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.0.12/spring-web-6.0.12.jar!/org/springframework/web/filter/RequestContextFilter.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -123,6 +126,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.CountryApiExample" />
+        <item itemvalue="JUnit.CityServiceTest.testGetCitiesByCountryName" />
+        <item itemvalue="JUnit.CityServiceTest" />
         <item itemvalue="JUnit.CityServiceTest.testGetCitiesByCountryName" />
         <item itemvalue="JUnit.CityServiceTest" />
       </list>
@@ -333,7 +338,42 @@
       <option name="project" value="LOCAL" />
       <updated>1736591848721</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="complete overhaul using angular materials prebuilt components">
+      <created>1740084677524</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1740084677524</updated>
+    </task>
+    <task id="LOCAL-00030" summary="copy of original before overhaul. DO NOT MERGE WITH MAIN">
+      <created>1740084927276</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1740084927276</updated>
+    </task>
+    <task id="LOCAL-00031" summary="completed main phase of the overhaul">
+      <created>1740111917514</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1740111917514</updated>
+    </task>
+    <task id="LOCAL-00032" summary="minor adjustments and typofixes to overhaul">
+      <created>1740112569421</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1740112569421</updated>
+    </task>
+    <task id="LOCAL-00033" summary="fixed some typos and adjusted website background to be more consistent with different sizes">
+      <created>1740456309643</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1740456309643</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,11 +388,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added component for world countries to pull data from an API that will be created. Modified Profile Component to incorporate a table that will serve as the foundation for building a table in world countries" />
-    <MESSAGE value="created a component to pull pokemon data from the pokemonAPI to practice for my own api" />
-    <MESSAGE value="seperated methods for fetching from api, added a table for different sprites" />
-    <MESSAGE value="created a new component for tech stack to move my profile component into and change profile component into my summary" />
-    <MESSAGE value="created a new component for tech stack to move my profile component into and change profile component into my summary.&#10;&#10;made profile collapsible" />
     <MESSAGE value="added unit tests for city service using mockito to mock data from the repository&#10;cleaned up code in respective classes" />
     <MESSAGE value="modified web cv so that components are collapsible which expand when clicked on" />
     <MESSAGE value="modified web cv so that components are collapsible which expand when clicked on, also adjusted the width of components so that they take up the full width of their container." />
@@ -373,7 +408,12 @@
     <MESSAGE value="fixed bug where tech-stack collapsibles wasnt collapsing properly. tested api through front end with cities endpoints to make sure they work on web page. will need to add tables from them" />
     <MESSAGE value="adjusted CountryLanguageService to show order of for the stream. added default styling to list elements so that there is a hover effect on them when the user hovers the mouse over them" />
     <MESSAGE value="modified main page so that clickable links are centered. modified the world-populations.component to be collapsed by default&#10;tweaked list styling so that they are more responsive to small screens" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified main page so that clickable links are centered. modified the world-populations.component to be collapsed by default&#10;tweaked list styling so that they are more responsive to small screens" />
+    <MESSAGE value="complete overhaul using angular materials prebuilt components" />
+    <MESSAGE value="copy of original before overhaul. DO NOT MERGE WITH MAIN" />
+    <MESSAGE value="completed main phase of the overhaul" />
+    <MESSAGE value="minor adjustments and typofixes to overhaul" />
+    <MESSAGE value="fixed some typos and adjusted website background to be more consistent with different sizes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some typos and adjusted website background to be more consistent with different sizes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
