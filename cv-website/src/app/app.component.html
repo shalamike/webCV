@@ -4,7 +4,7 @@
 
 <div class="website-clickable-links">
   <a
-    mat-raised-button color="primary"
+    mat-raised-button
     class="website-button"
     href="https://www.linkedin.com/in/michael-shalaby-535977129/"
     target="_blank"
@@ -13,7 +13,7 @@
   </a>
 
   <a
-    mat-raised-button color="primary"
+    mat-raised-button
     class="website-button"
     href="https://drive.google.com/file/d/1zepFJigPrVntvxkc8_NFSQH_OMzbzAlo/view?usp=sharing"
     target="_blank"
@@ -21,7 +21,7 @@
     CV
   </a>  
   <a
-    mat-raised-button color="primary"
+    mat-raised-button
     class="website-button"
     href="https://github.com/shalamike"
     target="_blank"
@@ -30,9 +30,15 @@
   </a>
 </div>
 
+
+
 <div class="accordion-controls" style="text-align: center; margin-bottom: 10px;">
-  <button mat-raised-button color="primary" (click)="expandAll()">Expand All</button>
-  <button mat-raised-button color="warn" (click)="collapseAll()">Collapse All</button>
+  <button mat-raised-button color="primary" 
+  (click)="expandAll()"
+  class="accordion-button">Expand All</button>
+  <button mat-raised-button color="warn" 
+  (click)="collapseAll()"
+  class="accordion-button">Collapse All</button>
 </div>
 
 <mat-accordion multi="true">

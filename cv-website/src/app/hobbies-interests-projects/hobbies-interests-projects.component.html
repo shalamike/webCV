@@ -1,34 +1,5 @@
-<div class="collapsible-container" [class.collapsed-container]="isCollapsed"
-(click)="toggleCollapse()"
-(keydown)="toggleCollapse()">
-  <div
-    class="collapsible-header"
-    [class.collapsed-header]="isCollapsed"
-  >
-    <h2 class="hobbies-interests-projects-header">
-      Hobbies, Interests, and Projects
-    </h2>
-    <span *ngIf="isCollapsed">▼ click or tap on the title to expand section</span>
-    <span *ngIf="!isCollapsed">▲ click or tap on the title to collapse section and return to home</span>
 
-    <div
-      class="collapsible-content"
-      [class.collapsed]="isCollapsed"
-      (click)="$event.stopPropagation()"
-      (keydown)="$event.stopPropagation()"
-    >
-      <!-- This stops the event from bubbling up to the parent element -->
 
-      <div class="collapsibles-container"
-      (click)="$event.stopPropagation()"
-      (keydown)="$event.stopPropagation()">
-        <app-pokemon></app-pokemon>
+<app-pokemon></app-pokemon>
 
-        <!-- world populations-->
-        <app-world-populations></app-world-populations>
-
-  
-      </div>
-    </div>
-  </div>
-</div>
+<app-world-populations></app-world-populations>

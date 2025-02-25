@@ -5,7 +5,8 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #add8e6, #ffffff);
+  background: linear-gradient(to bottom, #c6f1ff, #ffffff,#c6f1ff);
+  
 }
 
 ul :hover{

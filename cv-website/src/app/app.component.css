@@ -5,18 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Default styling for the body */
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(120deg, #e0f7fa, #ffffff);
-  /* Light blue/teal gradient */
-  color: #333;
-  /* Dark text color for contrast */
-  font-size: 16px;
-  /* Base font size */
-  line-height: 1.6;
-  /* Better readability */
-}
 
 
 
@@ -38,10 +26,16 @@ body {
 
 .accordion-controls{
   align-items: center;
-  margin : 10px;
+  flex-direction: column;
+  flex: content;
 }
 
 .website-button {
+  border-radius: 8px; 
+  margin: 3%;
+}
+
+.accordion-button {
   border-radius: 8px; 
   margin: 3%;
 }
@@ -117,22 +111,6 @@ html {
   margin: 10px;
 }
 
-/* Banner styling */
-.banner {
-  background: linear-gradient(to right, #00796b, #004d40);
-  /* Teal gradient */
-  color: #fff;
-  /* White text */
-  padding: 20px;
-  text-align: center;
-  border-radius: 0 0 10px 10px;
-  /* Rounded bottom corners */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  animation: fadeOut 5s ease-in-out 1;
-  /* Fades out after 5 seconds */
-}
 
 /* H1 styling inside the banner */
 .banner h1 {
