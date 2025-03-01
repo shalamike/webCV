@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cv-website",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -97,6 +97,9 @@
     }
   },
   "cli": {
-    "analytics": "fe8bbd79-f0c8-40c1-b518-b8bbeff1eff6"
+    "analytics": "fe8bbd79-f0c8-40c1-b518-b8bbeff1eff6",
+    "cache": {
+      "enabled": false
+    }
   }
 }
