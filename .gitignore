@@ -32,11 +32,11 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
-.vscode/
+worldpops/.vscode/
 
 ### Mac OS ###
 .DS_Store
 
 
 ### local files to be ignored ###
-/src/main/resources/application.properties
+/worldpops/src/main/resources/application.properties
