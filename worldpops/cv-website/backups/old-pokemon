@@ -1,0 +1,94 @@
+<div class="collapsible-container" [class.collapsed-container]="isCollapsed">
+  <div class="collapsible-header" 
+  [class.collapsed-header]="isCollapsed" 
+      (click)="toggleCollapse()"
+      (keydown)="toggleCollapse()"
+      >
+    <h2 class = "PokemonHeader">
+      Pokemon Search (Api created by <a href="https://pokeapi.co/">PokeAPI</a>)
+    </h2>
+
+    <span *ngIf="isCollapsed">▼</span>
+      <span *ngIf="!isCollapsed">▲</span>
+
+    <div class="collapsible-content" 
+    [class.collapsed]="isCollapsed"
+    (click) = "$event.stopPropagation()"
+      (keydown)="$event.stopPropagation()"> <!-- This stops the event from bubbling up to the parent element -->
+      <div class="pokemon-container">
+        <h1>Pokémon Search</h1>
+        
+        <input
+          type="text"
+          placeholder="Enter Pokémon name"
+          [(ngModel)]="searchName"
+        />
+        <button (click)="fetchPokemon()">Search</button>
+      
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+      
+        <div *ngIf="pokemonData" class="pokemon-info">
+          <h2>{{ pokemonData.name | titlecase }}</h2>
+          <p><strong>ID:</strong> {{ pokemonData.id }}</p>
+          <p><strong>Base Experience:</strong> {{ pokemonData.base_experience }}</p>
+          <p><strong>Weight:</strong> {{ pokemonData.weight }}</p>
+    
+          <h2>Sprites</h2>
+          <table class = "sprites-table">
+            <thead>
+              <tr>
+                <th>Front Default</th>
+                <th>Back Default</th>
+                <th>Front Shiny</th>
+                <th>Back Shiny</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img [src]="pokemonData.sprites.front_default" alt="{{ pokemonData.name }}" /></td>
+                <td><img [src]="pokemonData.sprites.back_default" alt="{{ pokemonData.name }}" /></td>
+                <td><img [src]="pokemonData.sprites.front_shiny" alt="{{ pokemonData.name }}" /></td>
+                <td><img [src]="pokemonData.sprites.back_shiny" alt="{{ pokemonData.name }}" /></td>
+              </tr>
+            </tbody>
+          </table>
+    
+    
+          <h2>Abilities</h2>
+          <table class = "abilities-table">
+            <thead>
+              <tr>
+                <th>Ability</th>
+                <th>description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ability of pokemonData.abilities">
+                <td>{{ ability.ability.name }}</td>
+                <td>{{ abilityDescriptions[ability.ability.name] || 'Loading...' }}</td>  
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    
+    
+    
+      </div>
+    </div>
+    
+    </div>
+</div>
+
+
+<div class="cities-by-population">
+  <p>enter a population to see cities with a population greater than the value you entered</p>
+  <input 
+      type = "number"
+      placeholder="Enter Population"
+      [(ngModel)]="searchPopulation"
+      class="world-populations-input"
+      (keydown.enter)="fetchCitiesWithPopulationAbove(searchPopulation)"
+  />
+</div>
