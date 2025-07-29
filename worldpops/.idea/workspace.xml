@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="fixed some typos and adjusted website background to be more consistent with different sizes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/dist/main.d1f090980838d3f2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/dist/styles.87fe441fc9f1f15f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-website/src/app/services/world-populations-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cv-website/src/app/services/world-populations-service.service.ts" afterDir="false" />
+    <list default="true" id="5f61ed86-3310-415a-a811-3ef2aefb8fdd" name="Changes" comment="fixed  angular.json to ensure latest changes will get pushed to ghpages">
+      <change beforePath="$PROJECT_DIR$/../cv-website/dist/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cv-website/dist/3rdpartylicenses.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +27,7 @@
         <entry key="$PROJECT_DIR$" value="overhaul3" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.13/tomcat-embed-websocket-10.1.13.jar!/org/apache/tomcat/websocket/server/WsFilter.class" root0="SKIP_INSPECTION" />
@@ -59,11 +55,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mike/Documents/programming/WebTemplate3/taskexpert&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mike/Documents/programming/WebTemplate3/worldpops&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.codegpt.services.codegpt&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -71,6 +67,12 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mike\Documents\programming\WebTemplate3\worldpops\src\main\resources\db\migration" />
+      <recent name="C:\Users\Mike\Documents\programming\WebTemplate3\worldpops\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.CountryApiExample">
     <configuration name="CountryApiExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
@@ -373,7 +375,35 @@
       <option name="project" value="LOCAL" />
       <updated>1740456309643</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="added most recent cv">
+      <created>1749918928575</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1749918928575</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added cv to websites assets folder">
+      <created>1749919283523</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1749919283523</updated>
+    </task>
+    <task id="LOCAL-00036" summary="modified webpage to show most updated cv within assets instead of a link to google drive">
+      <created>1749919357548</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1749919357548</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fixed  angular.json to ensure latest changes will get pushed to ghpages">
+      <created>1749920660506</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1749920660506</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -388,10 +418,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added unit tests for city service using mockito to mock data from the repository&#10;cleaned up code in respective classes" />
-    <MESSAGE value="modified web cv so that components are collapsible which expand when clicked on" />
-    <MESSAGE value="modified web cv so that components are collapsible which expand when clicked on, also adjusted the width of components so that they take up the full width of their container." />
-    <MESSAGE value="modified the font of the header of the main page, fixed glitch where table wouldnt collapse with collapsible when clicked" />
     <MESSAGE value="changed the font of the entire website, cleaned up the profile section to look neater and added experience component aswell" />
     <MESSAGE value="added pokemon component to y hobbies component, cleaned up profile component to have more consistent styling for url links, cleaned up experience so that it expands the entire way down allowing the user to scroll through." />
     <MESSAGE value="modified world api to include more queries, handle errors and cleaned up code to make further additions faster." />
@@ -413,7 +439,11 @@
     <MESSAGE value="completed main phase of the overhaul" />
     <MESSAGE value="minor adjustments and typofixes to overhaul" />
     <MESSAGE value="fixed some typos and adjusted website background to be more consistent with different sizes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some typos and adjusted website background to be more consistent with different sizes" />
+    <MESSAGE value="added most recent cv" />
+    <MESSAGE value="added cv to websites assets folder" />
+    <MESSAGE value="modified webpage to show most updated cv within assets instead of a link to google drive" />
+    <MESSAGE value="fixed  angular.json to ensure latest changes will get pushed to ghpages" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed  angular.json to ensure latest changes will get pushed to ghpages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

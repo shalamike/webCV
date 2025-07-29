@@ -1,5 +1,18 @@
 
 
+<div 
+  *ngFor="let aboutMeParagraph of aboutMeParagraphs; let i = index"
+  [ngClass]="{
+    'about-me-container': true,
+    'row': i % 2 === 0,
+    'row-reverse': i % 2 !== 0
+  }"
+>
+  <img [src]="aboutMeParagraph.image" class="about-me-image" />
+  <p class="about-me-text">{{ aboutMeParagraph.text }}</p>
+</div>
+
+
 <app-pokemon></app-pokemon>
 
-<app-world-populations></app-world-populations>
+<!-- <app-world-populations></app-world-populations> -->
