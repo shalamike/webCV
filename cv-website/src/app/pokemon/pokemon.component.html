@@ -1,26 +1,15 @@
 <div class="collapsible-container" [class.collapsed-container]="isCollapsed">
-  <div
-    class="collapsible-header"
-    (click)="toggleCollapse()"
-    (keydown)="toggleCollapse()"
-    tabindex="0"
-    role="button"
-  >
+  <div class="collapsible-header" (click)="toggleCollapse()" (keydown)="toggleCollapse()" tabindex="0" role="button">
     <h2>Pokedex</h2>
-    <p>A tool to search through pokemon stored on the <a href = "https://pokeapi.co/">pokemon</a> api</p>
+    <p>A tool to search through pokemon stored on the <a href="https://pokeapi.co/">pokemon</a> api</p>
     <span *ngIf="isCollapsed">▼</span>
     <span *ngIf="!isCollapsed">▲</span>
   </div>
 
   <div class="collapsible-content" [class.collapsed]="isCollapsed">
     <div class="pokedex">
-      <input
-        type="text"
-        placeholder="Enter Pokémon name"
-        [(ngModel)]="searchName"
-        class="pokedex-input"
-        (keydown.enter)="fetchPokemon()"
-      />
+      <input type="text" placeholder="Enter Pokémon name" [(ngModel)]="searchName" class="pokedex-input"
+        (keydown.enter)="fetchPokemon()" />
       <button (click)="fetchPokemon()" class="pokedex-button">Search</button>
 
       <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
@@ -38,22 +27,13 @@
           <tbody>
             <tr>
               <td>
-                <img
-                  [src]="pokemonData.sprites.front_default"
-                  alt="front sprite"
-                />
+                <img [src]="pokemonData.sprites.front_default" alt="front sprite" />
               </td>
               <td>
-                <img
-                  [src]="pokemonData.sprites.back_default"
-                  alt="back sprite"
-                />
+                <img [src]="pokemonData.sprites.back_default" alt="back sprite" />
               </td>
               <td>
-                <img
-                  [src]="pokemonData.sprites.front_shiny"
-                  alt="front shiny sprite"
-                />
+                <img [src]="pokemonData.sprites.front_shiny" alt="front shiny sprite" />
               </td>
             </tr>
           </tbody>
@@ -84,7 +64,26 @@
             </tr>
           </tbody>
         </table>
+
+        <div class="evolutions">
+          <div *ngIf="evolvesFromName && evolvesFromName !== pokemonData.name">
+            Evolves from
+            <button (click)="fetchPokemonEvolution(evolvesFromName)" class="btn btn-primary">
+              {{ evolvesFromName | titlecase }}
+            </button>
+          </div>
+
+          <div *ngIf="evolvesToName && evolvesToName !== pokemonData.name">
+            Evolves to
+            <button (click)="fetchPokemonEvolution(evolvesToName)" class="btn btn-primary">
+              {{ evolvesToName | titlecase }}
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
+<div>
+
 </div>
