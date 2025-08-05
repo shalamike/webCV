@@ -12,15 +12,14 @@ export class PokemonComponent {
   errorMessage: string = '';
   abilityDescriptions: { [key: string]: string } = {};
   isCollapsed = true;
-  evolvesToName: string = '';
-  evolvesToUrl: string = '';
+  evolvesToList: { name: string; url: string }[] = [];
   evolvesFromName: string = '';
   evolvesFromUrl: string = '';
 
   constructor(
     private cdr: ChangeDetectorRef,
     private pokemonService: PokemonService
-  ) {}
+  ) { }
 
   fetchPokemon(): void {
     if (!this.searchName) {
@@ -41,10 +40,6 @@ export class PokemonComponent {
     this.getPokemonData(name);
   }
 
-  fetchPokemonEvolvesTo(): void {
-    this.fetchPokemonEvolution(this.evolvesToName);
-    // console.log("fetching pokemon " + this.evolvesToName)
-  }
 
   fetchPokemonEvolvesFrom(): void {
     this.fetchPokemonEvolution(this.evolvesFromName);
@@ -54,8 +49,7 @@ export class PokemonComponent {
     // clearing evolution data between searches
     this.evolvesFromName = '';
     this.evolvesFromUrl = '';
-    this.evolvesToName = '';
-    this.evolvesToUrl = '';
+    this.evolvesToList = [];
 
     this.pokemonService.getPokemonByName(name).subscribe({
       next: (data) => {
@@ -106,7 +100,7 @@ export class PokemonComponent {
             const chain = evolutionData.chain;
             const currentName = name.toLowerCase();
 
-            // Helper to recursively find the current Pokémon in the chain
+            // Recursive search for current Pokémon node
             const findCurrentPokemon = (node: any, prev: any = null): any => {
               if (node.species.name === currentName) {
                 return { current: node, previous: prev };
@@ -123,31 +117,28 @@ export class PokemonComponent {
             if (result) {
               const { current, previous } = result;
 
-              // Set evolvesFrom
               if (previous) {
                 this.evolvesFromName = previous.species.name;
                 this.evolvesFromUrl = previous.species.url;
               }
 
-              // Set evolvesTo
               if (current.evolves_to && current.evolves_to.length > 0) {
-                this.evolvesToName = current.evolves_to[0].species.name;
-                this.evolvesToUrl = current.evolves_to[0].species.url;
+                this.evolvesToList = current.evolves_to.map((evo: any) => ({
+                  name: evo.species.name,
+                  url: evo.species.url,
+                }));
               }
             }
 
-            this.cdr.detectChanges(); // Update view if needed
+            this.cdr.detectChanges();
           },
-          error: () => {
-            console.error('Failed to fetch evolution chain');
-          },
+          error: () => console.error('Failed to fetch evolution chain'),
         });
       },
-      error: () => {
-        console.error('Failed to fetch species data');
-      },
+      error: () => console.error('Failed to fetch species data'),
     });
   }
+
 
   private fetchAbilitiesDescriptions(abilities: any[]): void {
     abilities.forEach((ability: any) => {

@@ -73,13 +73,17 @@
             </button>
           </div>
 
-          <div *ngIf="evolvesToName && evolvesToName !== pokemonData.name">
-            Evolves to
-            <button (click)="fetchPokemonEvolution(evolvesToName)" class="btn btn-primary">
-              {{ evolvesToName | titlecase }}
-            </button>
+          <div *ngIf="evolvesToList.length > 0">
+            Evolves to:
+            <div *ngFor="let evo of evolvesToList">
+              <button *ngIf="evo.name !== pokemonData.name" (click)="fetchPokemonEvolution(evo.name)"
+                class="btn btn-primary">
+                {{ evo.name | titlecase }}
+              </button>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
