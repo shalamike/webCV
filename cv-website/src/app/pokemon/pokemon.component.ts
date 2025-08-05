@@ -1,5 +1,7 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { PokemonService } from '../services/pokemon.service';
+import { Observable, map, startWith } from 'rxjs';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-pokemon',
@@ -7,7 +9,7 @@ import { PokemonService } from '../services/pokemon.service';
   styleUrls: ['./pokemon.component.css'],
 })
 export class PokemonComponent {
-  searchName: string = '';
+  // searchName: string = '';
   pokemonData: any = null;
   errorMessage: string = '';
   abilityDescriptions: { [key: string]: string } = {};
@@ -15,19 +17,43 @@ export class PokemonComponent {
   evolvesToList: { name: string; url: string }[] = [];
   evolvesFromName: string = '';
   evolvesFromUrl: string = '';
+  PokemonNamesList: string[] = [];
+  searchControl = new FormControl('');
+  filteredPokemonNames!: Observable<string[]>;
+
 
   constructor(
     private cdr: ChangeDetectorRef,
     private pokemonService: PokemonService
   ) { }
 
+
+  ngOnInit() {
+    this.fetchAllPokemonNames(); // fetch names first
+
+    // Setup the filter after names are fetched
+    this.filteredPokemonNames = this.searchControl.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value || ''))
+    );
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.PokemonNamesList.filter(name => name.toLowerCase().includes(filterValue));
+  }
+
+
+
   fetchPokemon(): void {
-    if (!this.searchName) {
+    const name = this.searchControl.value?.trim();
+
+    if (!name) {
       this.errorMessage = 'Please enter a Pokémon name.';
       this.pokemonData = null;
       return;
     }
-    this.getPokemonData(this.searchName.toLowerCase());
+    this.getPokemonData(name.toLowerCase());
   }
 
   fetchPokemonEvolution(name: string): void {
@@ -71,17 +97,17 @@ export class PokemonComponent {
   // private getEvolutionInfo(name: string, url: string) {
   //   this.pokemonService.getPokemonDetails(url).subscribe(
   //     {
-  //       next:(species) => {
-  //         // console.log(species.evolution_chain.url);
-  //         this.pokemonService.getPokemonDetails(species.evolution_chain.url).subscribe(
+  //       next:(speciesData) => {
+  //         // console.log(speciesData.evolution_chain.url);
+  //         this.pokemonService.getPokemonDetails(speciesData.evolution_chain.url).subscribe(
   //          {
-  //            next:(evolutions: any) => { // its a tree!!!!!!
-  //             console.log(evolutions.chain.species.name) // starter pokemon name
-  //             console.log(evolutions.chain.species.url) // starter pokeomon url
-  //             console.log(evolutions.chain.evolves_to[0].species.name);//first evolution name
-  //             console.log(evolutions.chain.evolves_to[0].species.url); // first evolution url
-  //             console.log(evolutions.chain.evolves_to[0].evolves_to[0].species.name);//final evolution name
-  //             console.log(evolutions.chain.evolves_to[0].evolves_to[0].species.url); // final evolution url
+  //            next:(evolutionsData: any) => { // its a tree!!!!!!
+  //             console.log(evolutionsData.chain.species.name) // starter pokemon name
+  //             console.log(evolutionsData.chain.species.url) // starter pokeomon url
+  //             console.log(evolutionsData.chain.evolves_to[0].species.name);//first evolution name
+  //             console.log(evolutionsData.chain.evolves_to[0].species.url); // first evolution url
+  //             console.log(evolutionsData.chain.evolves_to[0].evolves_to[0].species.name);//final evolution name
+  //             console.log(evolutionsData.chain.evolves_to[0].evolves_to[0].species.url); // final evolution url
   //            }
   //          }
   //         )
@@ -100,7 +126,7 @@ export class PokemonComponent {
             const chain = evolutionData.chain;
             const currentName = name.toLowerCase();
 
-            // Recursive search for current Pokémon node
+            // inner method to recursively search the evolution tree for current Pokémon node
             const findCurrentPokemon = (node: any, prev: any = null): any => {
               if (node.species.name === currentName) {
                 return { current: node, previous: prev };
@@ -165,6 +191,18 @@ export class PokemonComponent {
     );
     return effectEntry?.effect || null;
   }
+
+  fetchAllPokemonNames() {
+    this.pokemonService.getAllPokemon().subscribe(
+      (entry: any) => {
+        // console.log(entry.results);
+        entry.results.forEach((value: any) => {
+          this.PokemonNamesList.push(value.name);
+        })
+      }
+    );
+  }
+
 
   toggleCollapse(): void {
     this.isCollapsed = !this.isCollapsed;

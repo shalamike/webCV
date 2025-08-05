@@ -8,8 +8,20 @@
 
   <div class="collapsible-content" [class.collapsed]="isCollapsed">
     <div class="pokedex">
-      <input type="text" placeholder="Enter Pokémon name" [(ngModel)]="searchName" class="pokedex-input"
-        (keydown.enter)="fetchPokemon()" />
+
+      <mat-form-field class="pokedex-input" appearance="fill">
+        <input type="text" matInput placeholder="Enter Pokémon name" [formControl]="searchControl"
+          [matAutocomplete]="auto" (keydown.enter)="fetchPokemon()" />
+
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let name of filteredPokemonNames | async" [value]="name">
+            {{ name | titlecase }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+
+
       <button (click)="fetchPokemon()" class="pokedex-button">Search</button>
 
       <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
@@ -88,6 +100,8 @@
     </div>
   </div>
 </div>
-<div>
 
+
+<div>
+  <button (click)="fetchAllPokemonNames()" class="pokedex-button">allPokes</button>
 </div>
