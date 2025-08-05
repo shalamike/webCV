@@ -75,7 +75,7 @@ export class PokemonComponent {
   //         // console.log(species.evolution_chain.url);
   //         this.pokemonService.getPokemonDetails(species.evolution_chain.url).subscribe(
   //          {
-  //            next:(evolutions: any) => {
+  //            next:(evolutions: any) => { // its a tree!!!!!!
   //             console.log(evolutions.chain.species.name) // starter pokemon name
   //             console.log(evolutions.chain.species.url) // starter pokeomon url
   //             console.log(evolutions.chain.evolves_to[0].species.name);//first evolution name
