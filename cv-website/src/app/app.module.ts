@@ -14,6 +14,11 @@ import { HobbiesInterestsProjectsComponent } from './hobbies-interests-projects/
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,7 @@ import { MatButtonModule } from '@angular/material/button';
     PokemonComponent,
     TechStackComponent,
     ExperienceComponent,
-    HobbiesInterestsProjectsComponent
+    HobbiesInterestsProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,11 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    MatButtonModule
+    MatButtonModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
