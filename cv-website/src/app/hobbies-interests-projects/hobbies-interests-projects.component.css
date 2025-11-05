@@ -27,6 +27,19 @@
   line-height: 1.6;
 }
 
+.pokedex-header {
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #ff6f6f;
+  color: #ff8f8f;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 
 @media (max-width: 768px) {
   .about-me-container {

@@ -1,18 +1,32 @@
-
-
-<div 
-  *ngFor="let aboutMeParagraph of aboutMeParagraphs; let i = index"
-  [ngClass]="{
+<div *ngFor="let aboutMeParagraph of aboutMeParagraphs; let i = index" [ngClass]="{
     'about-me-container': true,
     'row': i % 2 === 0,
     'row-reverse': i % 2 !== 0
-  }"
->
+  }">
   <img [src]="aboutMeParagraph.image" class="about-me-image" />
   <p class="about-me-text">{{ aboutMeParagraph.text }}</p>
 </div>
 
 
-<app-pokemon></app-pokemon>
+<div class="projects-title">
+  <h3>
+    Projects
+  </h3>
+</div>
+
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header class="pokedex-header">
+    <mat-panel-title>
+      Pokedex
+    </mat-panel-title>
+    <mat-panel-description>
+      A tool to search through pokemon stored on the <a href="https://pokeapi.co/">pokemon</a> api
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <app-pokemon></app-pokemon>
+</mat-expansion-panel>
+
 
 <!-- <app-world-populations></app-world-populations> -->

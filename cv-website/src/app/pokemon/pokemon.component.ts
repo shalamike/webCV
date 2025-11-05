@@ -14,7 +14,7 @@ export class PokemonComponent {
   errorMessage: string = '';
   abilityDescriptions: { [key: string]: string } = {};
   isCollapsed = true;
-  evolvesToList: { name: string; url: string }[] = [];
+  evolvesToObject: { name: string; url: string }[] = [];
   evolvesFromName: string = '';
   evolvesFromUrl: string = '';
   PokemonNamesList: string[] = [];
@@ -75,7 +75,7 @@ export class PokemonComponent {
     // clearing evolution data between searches
     this.evolvesFromName = '';
     this.evolvesFromUrl = '';
-    this.evolvesToList = [];
+    this.evolvesToObject = [];
 
     this.pokemonService.getPokemonByName(name).subscribe({
       next: (data) => {
@@ -149,7 +149,7 @@ export class PokemonComponent {
               }
 
               if (current.evolves_to && current.evolves_to.length > 0) {
-                this.evolvesToList = current.evolves_to.map((evo: any) => ({
+                this.evolvesToObject = current.evolves_to.map((evo: any) => ({
                   name: evo.species.name,
                   url: evo.species.url,
                 }));
